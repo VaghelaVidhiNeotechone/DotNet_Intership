@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> DAY-1</title>
+ 
+</head>
+<body>
+
+  <h3>JavaScript</h3>
+
+  
+  <p id="demo">JavaScript content display here!!</p>  
+  <button onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript...'">Click Me</button>
+
+
+  <h4>Light Bulb Example</h4>
+  <button onclick="document.getElementById('image').src='pic_bulbon.gif'">Turn Bulb On</button>
+  <img id="image" src="pic_bulboff.gif" style="width:100px;">
+  <button onclick="document.getElementById('image').src='pic_bulboff.gif'">Turn Bulb Off</button>
+
+  
+  <p id="fontsize">JavaScript changes the font size</p>
+  <button onclick="document.getElementById('fontsize').style.fontSize='40px'">Make Big Font</button>
+
+  
+  <p id="display">Display None</p>
+  <button onclick="document.getElementById('display').style.display='none'">Hide</button>
+
+
+  <p id="block" style="display: none;">Hello JavaScript!</p>
+  <button onclick="document.getElementById('block').style.display='block'">Show</button>
+
+  
+  <p id="demo3">A Paragraph</p>
+  <button onclick="myFunction()">Try it (Function)</button>
+
+  
+  <button onclick="document.write(5 + 5)">Sum using document.write()</button>
+
+  
+  <button onclick="window.print()">Print</button>
+
+ 
+  <button onclick="console.log(5 + 6)">Log to Console</button>
+
+
+  <p id="sum"></p>
+  <p id="demo2"></p>
+  <p id="demo4">hyy</p>
+  <button type="button" onclick="myfunction1()">Try it</button>
+  <script src="script.js"></script> 
+  <script>
+    document.getElementById('demo2').innerHTML=10.20
+
+
+    let x,y,z;
+    x=3;
+    y=3;
+    z=x+y;
+    document.getElementById("sum").innerHTML="The value of z is "+z+".";
+
+
+       function myFunction() {
+      document.getElementById("demo3").innerHTML = "Paragraph changed using JavaScript function!";
+    }
+
+
+  </script>
+
+ 
+
+</body>
+</html>

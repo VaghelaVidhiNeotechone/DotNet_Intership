@@ -1,0 +1,7 @@
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\bin\Debug\C#-All Day Task.exe.config
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\bin\Debug\C#-All Day Task.exe
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\bin\Debug\C#-All Day Task.pdb
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\obj\Debug\C#-All Day Task.csproj.AssemblyReference.cache
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\obj\Debug\C#-All Day Task.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\obj\Debug\C#-All Day Task.exe
+D:\Visual Studio 2022\C#-All Day Task\C#-All Day Task\obj\Debug\C#-All Day Task.pdb

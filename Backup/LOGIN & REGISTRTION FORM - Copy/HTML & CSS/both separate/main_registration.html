@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="style.css">
+ </head>
+
+<body>
+  <div class="form-container2">
+    <form action="main_login.html">
+      <h1>Registration</h1>
+
+      <div class="row">
+        <div class="half">
+          <label for="name">👩🏻‍💼👨🏻‍💼First Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="half">
+          <label for="name">Last Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Surname" required>
+        </div>
+        <div class="half">
+          <label for="email">📧Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Email ID" required>
+        </div>
+        <div class="half">
+          <label for="password2">🔒Password:</label>
+          <input type="password" id="password2" name="password" placeholder="Enter Password" required>
+        </div>
+        <div class="half">
+          <label for="confirm">🔒✅ Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Enter Confirm Password" required>
+        </div>
+        <div class="half">
+          <label>⚧️Gender:</label>
+          <div class="gender-group">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="other" required> Other</label>
+          </div>
+        </div>
+        <div class="half">
+          <label for="address">📍 Address</label>
+          <textarea name="address" id="address" placeholder="Enter Address" required
+            style="width: 390px;height: 50px;"></textarea>
+        </div>
+
+        <div class="half">
+          <label for="countries">🌍Countries:</label>
+          <select name="countries" id="countries" required>
+            <option disabled selected>Select Country</option>
+            <option value="india">India</option>
+            <option value="brazil">Brazil</option>
+            <option value="australia">Australia</option>
+            <option value="new zealand">New Zealand</option>
+            <option value="china">China</option>
+            <option value="south korea">South Korea</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+          </select>
+        </div>
+        <div class="half">
+          <label for="state">🏛️State:</label>
+          <select name="state" id="state" required>
+            <option disabled selected>Select State</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="kerala">Kerala</option>
+            <option value="punjab">Punjab</option>
+            <option value="haryana">Haryana</option>
+            <option value="acre">Acre</option>
+            <option value="amazonas">Amazonas</option>
+            <option value="victoria">Victoria</option>
+            <option value="tasmania">Tasmania</option>
+            <option value="northland">Northland</option>
+          </select>
+        </div>
+        <div class="half">
+          <label for="city">🏙️City:</label>
+          <select name="city" id="city" required>
+            <option disabled selected>Select City</option>
+            <option value="rajkot">Rajkot</option>
+            <option value="ahmedabad">Ahmedabad</option>
+            <option value="chandigarh">Chandigarh</option>
+            <option value="gurgaon">Gurgaon</option>
+            <option value="kochi">Kochi</option>
+            <option value="thiruvananthapuram">Thiruvananthapuram</option>
+            <option value="amritsar">Amritsar</option>
+            <option value="ludhiana">Ludhiana</option>
+            <option value="jaipur">Jaipur</option>
+            <option value="udaipur">Udaipur</option>
+            <option value="burnie">Burnie</option>
+            <option value="kingston">Kingston</option>
+            <option value="ballarat">Ballarat</option>
+            <option value="melbourne">Melbourne</option>
+            <option value="russell">Russell</option>
+            <option value="dargaville">Dargaville</option>
+          </select>
+        </div>
+        <div class="half">
+          <label for="age">🔢Age:</label>
+          <input type="number" id="age" name="age" placeholder="Enter Your Age" required>
+        </div>
+        <div class="half">
+          <label for="phone">📞Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="half">
+          <label for="website">🌐Website:</label>
+          <input type="url" id="website" name="website" placeholder="http://example.com">
+        </div>
+        <div class="half">
+          <label for="resume">📝Resume:</label>
+          <input type="file" id="resume" name="resume">
+        </div>
+        <div class="half">
+          <label for="dob">🎂Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="half">
+          <label for="preferred_time">🕰️Contact Time:</label>
+          <input type="time" id="preferred_time" name="preferred_time">
+        </div>
+        <div class="half">
+          <label for="birth_month">📅Birth Month:</label>
+          <input type="month" id="birth_month" name="birth_month">
+        </div>
+        <div class="half">
+          <label for="week">📆Preferred Week:</label>
+          <input type="week" id="week" name="week">
+        </div>
+        <div class="half">
+          <label for="satisfaction">😊Satisfaction (1–10):</label>
+          <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+        </div>
+        <div class="half">
+          <label for="search">🔍Search Interests:</label>
+          <input type="search" id="search" name="search" placeholder="Search...">
+        </div>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">I agree to the terms & conditions</label>
+      </div>
+      
+      <input type="hidden" name="role" value="student">
+
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="main_login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+
+</html>
