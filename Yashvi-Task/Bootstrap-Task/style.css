@@ -1,0 +1,134 @@
+:root {
+  --neon: #00f7ff;
+  --pink: #ff0077;
+  --bg-dark: #0d0d0d;
+  --glass: rgba(255, 255, 255, 0.07);
+  --blur: blur(12px);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #0b001a);
+  color: white;
+  overflow-x: hidden;
+  transition: background 0.4s ease;
+}
+
+body.light-mode {
+  background: #fefefe;
+  color: #111;
+}
+body.light-mode .glass-nav,
+body.light-mode .glass-box {
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+body.light-mode .btn-neon {
+  border-color: #333;
+  color: #000;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link:hover {
+  color: var(--neon);
+}
+.glass-nav {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+.bg-video {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+.hero-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn-neon {
+  border: 2px solid var(--neon);
+  color: var(--neon);
+  background: transparent;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: 0.3s ease;
+}
+.btn-neon:hover {
+  background: var(--neon);
+  color: black;
+  box-shadow: 0 0 20px var(--neon);
+}
+
+
+.neon-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: 0.4s ease;
+}
+.neon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px var(--pink);
+}
+.glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+}
+
+.neon-bar {
+  background: linear-gradient(90deg, var(--pink), var(--neon));
+  box-shadow: 0 0 10px var(--neon);
+}
+
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+.glass-input::placeholder {
+  color: #ccc;
+}
+
+
+.section {
+  padding: 100px 0;
+}
+
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.toggle-label {
+  background: var(--glass);
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.toggle-label i {
+  color: white;
+}
