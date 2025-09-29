@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LeetCode_Practice\4Sum.cs" />
+    <Compile Include="LeetCode_Practice\Search_Insert_Position.cs" />
     <Compile Include="Datatype_Variable.cs" />
     <Compile Include="LeetCode_Practice\Longest_Common_Prefix.cs" />
     <Compile Include="LeetCode_Practice\TwoSumNum.cs" />
