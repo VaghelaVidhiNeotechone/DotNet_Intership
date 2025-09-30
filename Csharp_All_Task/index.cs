@@ -30,6 +30,9 @@ namespace Csharp_All_Task
             TwoSumNum.run();
             Longest_Common_Prefix.run();
             Search_Insert_Position.run();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+          
 
 
         }

@@ -31,7 +31,7 @@ namespace Csharp_All_Task
             int[] nums = { 5, 4, 8, 1 };
             int target = 13;
 
-            int[] result= solution.TwoSum(nums, target);
+            int[] result = solution.TwoSum(nums, target);
             if (result.Length > 0)
             {
                 Console.WriteLine("Indices: " + result[0] + ", " + result[1]);
@@ -40,9 +40,8 @@ namespace Csharp_All_Task
             {
                 Console.WriteLine("No solution found.");
             }
-            
+
         }
     }
 
 }
-
