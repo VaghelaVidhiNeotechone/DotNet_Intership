@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.vs/
+=======
 # Ignore Visual Studio cache and temp files
 .vs/
 *.db
@@ -10,3 +13,4 @@
 *.log
 bin/
 obj/
+>>>>>>> staging
