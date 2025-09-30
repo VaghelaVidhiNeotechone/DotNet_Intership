@@ -51,6 +51,7 @@
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
+
     <Compile Include="Loops_Method.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search_Insert_Position.cs" />
