@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Csharp_All_Task
 {
     internal class index
@@ -28,11 +27,8 @@ namespace Csharp_All_Task
             Console.WriteLine("***************** Day - 7(Abstract_Interface_Array) ******************");
             Abstract_Interface_Array.run();
             Console.WriteLine("***************** Day - 8(LeetCode_Practice) ******************");
-            TwoSumNum.run();
-            Longest_Common_Prefix.run();
-            Search_Insert_Position.run();
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            
+
 
         }
     }
