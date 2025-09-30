@@ -10,28 +10,20 @@ namespace Csharp_All_Task
     {
         public static void run()
         {
-            Console.WriteLine("----Longest Comman Prefix----");
-            string[] strs = { "flower", "flow","flight" };
+            string[] strs = { "flower", "flow", "flight" };
             string result = CommanPrefix(strs);
+            Console.WriteLine("----Longest Common Prefix----");
             Console.WriteLine(result);
         }
 
         public static string CommanPrefix(string[] strs)
         {
-            if (strs.Length == 0)
-                return "";
+            if (strs.Length == 0) return "";
             string prefix = strs[0];
             for (int i = 1; i < strs.Length; i++)
                 while (strs[i].IndexOf(prefix) != 0)
-                {
                     prefix = prefix.Substring(0, prefix.Length - 1);
-                    if (prefix == "")
-                        return "";
-                }
-
             return prefix;
         }
     }
-
 }
-

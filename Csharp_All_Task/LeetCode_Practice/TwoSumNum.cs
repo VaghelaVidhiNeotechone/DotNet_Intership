@@ -15,33 +15,25 @@ namespace Csharp_All_Task
             {
                 int complement = target - nums[i];
                 if (numMap.ContainsKey(complement))
-                {
                     return new int[] { numMap[complement], i };
-                }
                 numMap[nums[i]] = i;
             }
             return new int[] { };
-
         }
 
         public static void run()
         {
-            Console.WriteLine("----Two Sum----");
-            TwoSumNum solution = new TwoSumNum();
             int[] nums = { 5, 4, 8, 1 };
             int target = 13;
 
+            TwoSumNum solution = new TwoSumNum();
             int[] result = solution.TwoSum(nums, target);
-            if (result.Length > 0)
-            {
-                Console.WriteLine("Indices: " + result[0] + ", " + result[1]);
-            }
-            else
-            {
-                Console.WriteLine("No solution found.");
-            }
 
+            Console.WriteLine("----Two Sum----");
+            if (result.Length > 0)
+                Console.WriteLine("Indices: " + result[0] + ", " + result[1]);
+            else
+                Console.WriteLine("No solution found.");
         }
     }
-
 }
