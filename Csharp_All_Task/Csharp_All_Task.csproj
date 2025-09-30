@@ -50,10 +50,6 @@
     <Compile Include="Datatype_Variable.cs" />
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
-    <Compile Include="LeetCode_Practice\Add_Two_Numbers.cs" />
-    <Compile Include="LeetCode_Practice\Longest_Common_Prefix.cs" />
-    <Compile Include="LeetCode_Practice\Search_Insert_Position.cs" />
-    <Compile Include="LeetCode_Practice\TwoSumNum.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
     <Compile Include="Loops_Method.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
