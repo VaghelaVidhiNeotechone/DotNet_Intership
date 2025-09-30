@@ -13,9 +13,11 @@ namespace Leetcode
         {
             Two_Sum.run();
 
-            //Remove_Duplicates_from_sorted_Array.run();
+            Remove_Duplicates_from_sorted_Array.run();
 
-            //Search_Insert_Position.run();
+            Search_Insert_Position.run();
+
+            Add_Two_Numbers.run();
         }
     }
 }
