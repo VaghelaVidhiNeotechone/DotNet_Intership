@@ -31,7 +31,7 @@ namespace Csharp_All_Task
         public static void run()
         {
             int[] nums = { 1, 3, 5, 6 };
-
+            Console.WriteLine("----Search Insert Position----");
             Console.Write("Enter any number to search: ");
             int target = Convert.ToInt32(Console.ReadLine());
 
