@@ -27,7 +27,6 @@ namespace Csharp_All_Task
             Console.WriteLine("***************** Day - 7(Abstract_Interface_Array) ******************");
             Abstract_Interface_Array.run();
             Console.WriteLine("***************** Day - 8(LeetCode_Practice) ******************");
-            
 
         }
     }
