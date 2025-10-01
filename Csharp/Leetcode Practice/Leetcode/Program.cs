@@ -18,6 +18,12 @@ namespace Leetcode
             Search_Insert_Position.run();
 
             Add_Two_Numbers.run();
+
+            Longest_Substring_Without_Repeating_Characters.run();
+
+            Median_of_Two_Sorted_Arrays.run();
+
+            Longest_Palindromic_Substring.run();
         }
     }
 }
