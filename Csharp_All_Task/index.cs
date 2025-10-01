@@ -28,10 +28,12 @@ namespace Csharp_All_Task
             Abstract_Interface_Array.run();
             Console.WriteLine("***************** Day - 8(LeetCode_Practice) ******************");
             TwoSumNum.run();
-            Longest_Common_Prefix.run();
             Search_Insert_Position.run();
+            Longest_Common_Prefix.run();
             Add_Two_Numbers.run();
             Longest_Substring_Without_Repeating_Characters.run();
+            Median_of_Two_Sorted_Arrays.run();
+            Longest_Palindromic_Substring.run();
 
 
 
