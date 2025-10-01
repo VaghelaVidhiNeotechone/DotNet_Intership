@@ -1,24 +1,20 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 
-
-public class Add_Two_Numbers
+namespace Csharp_All_Task
 {
-	public Add_Two_Numbers()
-	{
-		public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     internal class Add_Two_Numbers
     {
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int val = 0, ListNode next = null)
+            {
+                this.val = val;
+                this.next = next;
+            }
+        }
+
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode dummyHead = new ListNode(0);
@@ -31,8 +27,10 @@ public class Add_Two_Numbers
                 int y = l2?.val ?? 0;
                 int sum = carry + x + y;
                 carry = sum / 10;
+
                 curr.next = new ListNode(sum % 10);
                 curr = curr.next;
+
                 if (l1 != null) l1 = l1.next;
                 if (l2 != null) l2 = l2.next;
             }
@@ -45,8 +43,15 @@ public class Add_Two_Numbers
             ListNode head = null, curr = null;
             foreach (var n in arr)
             {
-                if (head == null) head = curr = new ListNode(n);
-                else { curr.next = new ListNode(n); curr = curr.next; }
+                if (head == null)
+                {
+                    head = curr = new ListNode(n);
+                }
+                else
+                {
+                    curr.next = new ListNode(n);
+                    curr = curr.next;
+                }
             }
             return head;
         }
@@ -65,18 +70,15 @@ public class Add_Two_Numbers
         {
             int[] arr1 = { 2, 5, 3 };
             int[] arr2 = { 7, 2, 5 };
+
             ListNode l1 = ArrayToList(arr1);
             ListNode l2 = ArrayToList(arr2);
 
             Add_Two_Numbers solver = new Add_Two_Numbers();
             ListNode res = solver.AddTwoNumbers(l1, l2);
 
-            Console.WriteLine("----Add Two Numbers----");
-            PrintList(res); 
+            Console.WriteLine("---- Add Two Numbers ----");
+            PrintList(res);
         }
     }
-	}
 }
-
-
-    
