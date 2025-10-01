@@ -1,24 +1,21 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
-
-public class Add_Two_Numbers
+namespace Csharp_All_Task
 {
-	public Add_Two_Numbers()
-	{
-		public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     internal class Add_Two_Numbers
     {
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int val = 0, ListNode next = null)
+            {
+                this.val = val;
+                this.next = next;
+            }
+        }
+
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode dummyHead = new ListNode(0);
@@ -30,9 +27,11 @@ public class Add_Two_Numbers
                 int x = l1?.val ?? 0;
                 int y = l2?.val ?? 0;
                 int sum = carry + x + y;
+
                 carry = sum / 10;
                 curr.next = new ListNode(sum % 10);
                 curr = curr.next;
+
                 if (l1 != null) l1 = l1.next;
                 if (l2 != null) l2 = l2.next;
             }
@@ -45,8 +44,15 @@ public class Add_Two_Numbers
             ListNode head = null, curr = null;
             foreach (var n in arr)
             {
-                if (head == null) head = curr = new ListNode(n);
-                else { curr.next = new ListNode(n); curr = curr.next; }
+                if (head == null)
+                {
+                    head = curr = new ListNode(n);
+                }
+                else
+                {
+                    curr.next = new ListNode(n);
+                    curr = curr.next;
+                }
             }
             return head;
         }
@@ -55,7 +61,8 @@ public class Add_Two_Numbers
         {
             while (node != null)
             {
-                Console.Write(node.val + (node.next != null ? " -> " : ""));
+                Console.Write(node.val);
+                if (node.next != null) Console.Write(" -> ");
                 node = node.next;
             }
             Console.WriteLine();
@@ -63,20 +70,21 @@ public class Add_Two_Numbers
 
         public static void run()
         {
-            int[] arr1 = { 2, 5, 3 };
-            int[] arr2 = { 7, 2, 5 };
+            Console.WriteLine("---- Add Two Numbers ----");
+            Console.Write("Enter first number (digits separated by space): ");
+            int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+            Console.Write("Enter second number (digits separated by space): ");
+            int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
             ListNode l1 = ArrayToList(arr1);
             ListNode l2 = ArrayToList(arr2);
 
             Add_Two_Numbers solver = new Add_Two_Numbers();
             ListNode res = solver.AddTwoNumbers(l1, l2);
 
-            Console.WriteLine("----Add Two Numbers----");
-            PrintList(res); 
+            Console.Write("Result: ");
+            PrintList(res);
         }
     }
-	}
 }
-
-
-    
