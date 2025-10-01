@@ -1,5 +1,7 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Csharp_All_Task
 {
@@ -27,8 +29,8 @@ namespace Csharp_All_Task
                 int x = l1?.val ?? 0;
                 int y = l2?.val ?? 0;
                 int sum = carry + x + y;
-
                 carry = sum / 10;
+
                 curr.next = new ListNode(sum % 10);
                 curr = curr.next;
 
@@ -61,8 +63,7 @@ namespace Csharp_All_Task
         {
             while (node != null)
             {
-                Console.Write(node.val);
-                if (node.next != null) Console.Write(" -> ");
+                Console.Write(node.val + (node.next != null ? " -> " : ""));
                 node = node.next;
             }
             Console.WriteLine();
@@ -70,12 +71,8 @@ namespace Csharp_All_Task
 
         public static void run()
         {
-            Console.WriteLine("---- Add Two Numbers ----");
-            Console.Write("Enter first number (digits separated by space): ");
-            int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-
-            Console.Write("Enter second number (digits separated by space): ");
-            int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            int[] arr1 = { 2, 5, 3 };
+            int[] arr2 = { 7, 2, 5 };
 
             ListNode l1 = ArrayToList(arr1);
             ListNode l2 = ArrayToList(arr2);
@@ -83,7 +80,7 @@ namespace Csharp_All_Task
             Add_Two_Numbers solver = new Add_Two_Numbers();
             ListNode res = solver.AddTwoNumbers(l1, l2);
 
-            Console.Write("Result: ");
+            Console.WriteLine("---- Add Two Numbers ----");
             PrintList(res);
         }
     }
