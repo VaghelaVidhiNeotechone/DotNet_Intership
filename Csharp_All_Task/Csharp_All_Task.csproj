@@ -48,7 +48,7 @@
     <Compile Include="Class_Object.cs" />
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Datatype_Variable.cs" />
-    <Compile Include="FileNameLongest_Substring_Without_Repeating_Characters.cs" />
+    <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
