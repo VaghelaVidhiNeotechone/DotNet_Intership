@@ -32,6 +32,8 @@ namespace Csharp_All_Task
             Longest_Common_Prefix.run();
             Add_Two_Numbers.run();
             Longest_Substring_Without_Repeating_Characters.run();
+            Median_of_Two_Sorted_Arrays.run();
+            Longest_Palindromic_Substring.run();
 
 
         }
