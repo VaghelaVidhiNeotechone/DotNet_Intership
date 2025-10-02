@@ -24,6 +24,12 @@ namespace Leetcode
             Median_of_Two_Sorted_Arrays.run();
 
             Longest_Palindromic_Substring.run();
+
+            Zigzag_Conversion.run();
+
+            Reverse_Integer.run();
+
+            String_To_Integer.run();
         }
     }
 }

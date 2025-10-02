@@ -50,8 +50,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Remove_Duplicates_from_sorted_Array.cs" />
+    <Compile Include="Reverse_Integer.cs" />
     <Compile Include="Search_Insert_Position.cs" />
+    <Compile Include="String_To_Integer.cs" />
     <Compile Include="Two_Sum.cs" />
+    <Compile Include="Zigzag_Conversion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
