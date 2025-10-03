@@ -52,11 +52,10 @@
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
-<<<<<<< HEAD
-=======
+
     <Compile Include="Longest_Palindromic_Substring.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
->>>>>>> Yashvi-Dev
+
     <Compile Include="Loops_Method.cs" />
     <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
