@@ -36,6 +36,8 @@ namespace Leetcode
             Container_With_Most_Water.run();
 
             Integer_To_Roman.run();
+
+            Roman_To_Integer.run();
         }
     }
 }
