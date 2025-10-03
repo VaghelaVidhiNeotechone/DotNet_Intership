@@ -34,6 +34,9 @@ namespace Csharp_All_Task
             Longest_Substring_Without_Repeating_Characters.run();
             Median_of_Two_Sorted_Arrays.run();
             Longest_Palindromic_Substring.run();
+            Zigzag_Conversion.run();
+            Reverse_Integer.run();
+            String_to_Integer.run();
 
 
 

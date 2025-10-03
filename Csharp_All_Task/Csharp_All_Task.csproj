@@ -52,17 +52,17 @@
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Longest_Palindromic_Substring.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
->>>>>>> Yashvi-Dev
     <Compile Include="Loops_Method.cs" />
     <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reverse_Integer.cs" />
     <Compile Include="Search_Insert_Position.cs" />
     <Compile Include="String_Conditional.cs" />
+    <Compile Include="String_to_Integer.cs" />
     <Compile Include="TwoSumNum.cs" />
+    <Compile Include="Zigzag Conversion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
