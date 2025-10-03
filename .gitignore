@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+.vs/
+=======
+# Ignore Visual Studio cache and temp files
+.vs/
+*.db
+*.db-shm
+*.db-wal
+*.vsidx
+*.suo
+*.user
+*.cache
+*.log
+bin/
+obj/
+>>>>>>> staging

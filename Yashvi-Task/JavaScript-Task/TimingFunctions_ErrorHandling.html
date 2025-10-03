@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DAY-9</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="text" id="demo2">
+    <button type="button" onclick="myfunction()">Submit</button>
+    <p id="P01"></p>
+    <script>
+        try{
+            allert("Welcome");
+        }
+        catch(err){
+            document.getElementById("demo").innerHTML=err.message;
+        }
+
+
+        function myfunction(){
+            const message=document.getElementById("P01");
+            message.innerHTML="";
+            let x=document.getElementById("demo2").value;
+            try{
+
+                if(x.trim()=="")throw " empty";  
+                if(isNaN(x)) throw " not a number";
+                x=Number(x);
+                if(x<5) throw " too low";
+                if(x>10) throw " too high";
+            }
+            catch(err){ 
+                message.innerHTML="Input is"+err;
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
