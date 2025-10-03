@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Add_Two_Numbers.cs" />
+    <Compile Include="Container_With_Most_Water.cs" />
+    <Compile Include="Integer_To_Roman.cs" />
     <Compile Include="Longest_Palindromic_Substring.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
     <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
+    <Compile Include="Palindrome_Number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Remove_Duplicates_from_sorted_Array.cs" />

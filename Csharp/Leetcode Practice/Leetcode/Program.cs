@@ -30,6 +30,12 @@ namespace Leetcode
             Reverse_Integer.run();
 
             String_To_Integer.run();
+
+            Palindrome_Number.run();
+
+            Container_With_Most_Water.run();
+
+            Integer_To_Roman.run();
         }
     }
 }
