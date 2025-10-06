@@ -44,7 +44,7 @@ namespace Csharp_All_Task
             Console.WriteLine("---- String To Integer----");
             Console.Write("Enter any number: ");
             string s =Console.ReadLine();
-            Console.WriteLine("Reverse Integer is : " + obj.MyAtoi(s));
+            Console.WriteLine("String to Integer Number is : " + obj.MyAtoi(s));
 
         }
     }
