@@ -17,7 +17,6 @@ namespace Csharp_All_Task
                 var remainder = x % 10;
                 var temp = result * 10 + remainder;
 
-                // in case of overflow, the current value will not be equal to the previous one
                 if ((temp - remainder) / 10 != result)
                 {
                     return 0;
