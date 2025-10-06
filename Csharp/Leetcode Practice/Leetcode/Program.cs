@@ -38,6 +38,14 @@ namespace Leetcode
             Integer_To_Roman.run();
 
             Roman_To_Integer.run();
+
+            Longest_Common_Prefix.run();
+
+            Three_Sum.run();
+
+            Three_Sum_Closest.run();
+
+            Letter_Combinations_Of_A_Phone_Number.run();
         }
     }
 }
