@@ -38,7 +38,11 @@ namespace Csharp_All_Task
             Zigzag_Conversion.run();
             Reverse_Integer.run();
             String_to_Integer.run();
-
+            Palindrome_Number.run();
+            Regular_Expression_Matching.run();
+            Container_With_Most_Water.run();
+            Integer_to_Roman.run();
+            Roman_to_Integer.run();
 
 
 
