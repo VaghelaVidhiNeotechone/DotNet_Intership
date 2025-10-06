@@ -46,6 +46,8 @@
     <Compile Include="Add_Two_Numbers.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Integer_To_Roman.cs" />
+    <Compile Include="Letter_Combinations_Of_A_Phone_Number.cs" />
+    <Compile Include="Longest_Common_Prefix.cs" />
     <Compile Include="Longest_Palindromic_Substring.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
     <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
@@ -57,6 +59,8 @@
     <Compile Include="Roman_To_Integer.cs" />
     <Compile Include="Search_Insert_Position.cs" />
     <Compile Include="String_To_Integer.cs" />
+    <Compile Include="Three_Sum.cs" />
+    <Compile Include="Three_Sum_Closest.cs" />
     <Compile Include="Two_Sum.cs" />
     <Compile Include="Zigzag_Conversion.cs" />
   </ItemGroup>
