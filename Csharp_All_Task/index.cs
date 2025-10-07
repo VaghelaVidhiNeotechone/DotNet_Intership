@@ -43,6 +43,11 @@ namespace Csharp_All_Task
             Container_With_Most_Water.run();
             Integer_to_Roman.run();
             Roman_to_Integer.run();
+            _3Sum.run();
+            _3Sum_Closest.run();
+            Letter_Combinations_ofa_Phone_Number.run();
+            _4Sum.run();
+            Remove_Nth_Node_From_End_of_List.run();
 
 
 
