@@ -46,6 +46,14 @@ namespace Leetcode
             Three_Sum_Closest.run();
 
             Letter_Combinations_Of_A_Phone_Number.run();
+
+            Four_Sum.run();
+
+            Remove_Nth_Node_From_End_Of_List.run();
+
+            Valid_Parentheses.run();
+
+            Merge_Two_Sorted_Lists.run();
         }
     }
 }
