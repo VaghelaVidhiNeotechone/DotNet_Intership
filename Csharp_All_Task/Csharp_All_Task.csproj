@@ -52,8 +52,6 @@
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Datatype_Variable.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
