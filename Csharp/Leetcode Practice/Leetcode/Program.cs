@@ -54,6 +54,16 @@ namespace Leetcode
             Valid_Parentheses.run();
 
             Merge_Two_Sorted_Lists.run();
+
+            Generate_Parentheses.run();
+
+            Merge_k_Sorted_Lists.run();
+
+            Swap_Nodes_In_Pairs.run();
+
+            Reverse_Nodes_In_K_Group.run();
+
+            Remove_Element.run();
         }
     }
 }
