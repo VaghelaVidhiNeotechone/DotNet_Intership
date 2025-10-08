@@ -65,11 +65,9 @@
     <Compile Include="String_Conditional.cs" />
     <Compile Include="TwoSumNum.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
-=======
->>>>>>> Staging
-=======
+
     <Compile Include="Generate_Parentheses.cs" />
->>>>>>> Staging
+
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Integer_to_Roman.cs" />
