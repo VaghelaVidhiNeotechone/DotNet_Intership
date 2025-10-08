@@ -47,6 +47,11 @@ namespace Csharp_All_Task
             Letter_Combinations_ofa_Phone_Number.run();
             _4Sum.run();
             Remove_Nth_Node_From_End_of_List.run();
+            Valid_Parentheses.run();
+            Merge_Two_Sorted_Lists.run();
+            Generate_Parentheses.run();
+            Merge_k_Sorted_Lists.run();
+            Swap_Nodes_in_Pairs.run();
 
 
 
