@@ -64,6 +64,16 @@ namespace Leetcode
             Reverse_Nodes_In_K_Group.run();
 
             Remove_Element.run();
+
+            Find_The_Index_Of_The_First_Occurrence_In_A_String.run();
+
+            Divide_Two_Integers.run();
+
+            Substring_With_Concatination_Of_All_Words.run();
+
+            Next_Permutation.run();
+
+            Longest_Valida_Parentheses.run();
         }
     }
 }
