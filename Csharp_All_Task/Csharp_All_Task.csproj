@@ -52,9 +52,26 @@
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Datatype_Variable.cs" />
+ Staging
     <Compile Include="Divide_Two_Integers_leetcode.cs" />
     <Compile Include="Find_the_Index_of_the_First_Occurrence_in_a_String.cs" />
+
+    <Compile Include="index.cs" />
+    <Compile Include="Inheritace_Polymorphism.cs" />
+    <Compile Include="Longest_Common_Prefix.cs" />
+    <Compile Include="Longest_Palindromic_Substring.cs" />
+    <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
+    <Compile Include="Loops_Method.cs" />
+    <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search_Insert_Position.cs" />
+    <Compile Include="String_Conditional.cs" />
+    <Compile Include="TwoSumNum.cs" />
+    <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
+
+ main
     <Compile Include="Generate_Parentheses.cs" />
+
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Integer_to_Roman.cs" />
@@ -84,6 +101,7 @@
     <Compile Include="TwoSumNum.cs" />
     <Compile Include="Valid_Parentheses .cs" />
     <Compile Include="Zigzag Conversion.cs" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
