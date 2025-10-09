@@ -53,7 +53,11 @@ namespace Csharp_All_Task
             Generate_Parentheses.run();
             Merge_k_Sorted_Lists.run();
             Swap_Nodes_in_Pairs.run();
-
+            Remove_Duplicates_from_Sorted_Array.run();
+            Remove_Element.run();
+            Find_the_Index_of_the_First_Occurrence_in_a_String.run();
+            Divide_Two_Integers_leetcode.run();
+            Reverse_Nodes_in_k_Group.run();
 
 
 
