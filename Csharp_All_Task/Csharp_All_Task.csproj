@@ -52,6 +52,8 @@
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Datatype_Variable.cs" />
+    <Compile Include="Divide_Two_Integers_leetcode.cs" />
+    <Compile Include="Find_the_Index_of_the_First_Occurrence_in_a_String.cs" />
     <Compile Include="Generate_Parentheses.cs" />
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
@@ -69,8 +71,11 @@
     <Compile Include="Palindrome_Number.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Regular_Expression_Matching.cs" />
+    <Compile Include="Remove_Duplicates_from_Sorted_Array.cs" />
+    <Compile Include="Remove_Element.cs" />
     <Compile Include="Remove_Nth_Node_From_End_of_List.cs" />
     <Compile Include="Reverse_Integer.cs" />
+    <Compile Include="Reverse_Nodes_in_k-Group.cs" />
     <Compile Include="Roman_to_Integer.cs" />
     <Compile Include="Search_Insert_Position.cs" />
     <Compile Include="String_Conditional.cs" />
