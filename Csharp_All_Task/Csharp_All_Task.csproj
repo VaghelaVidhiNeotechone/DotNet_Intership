@@ -52,7 +52,7 @@
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Datatype_Variable.cs" />
- Staging
+
     <Compile Include="Divide_Two_Integers_leetcode.cs" />
     <Compile Include="Find_the_Index_of_the_First_Occurrence_in_a_String.cs" />
 
@@ -69,7 +69,6 @@
     <Compile Include="TwoSumNum.cs" />
     <Compile Include="Longest_Substring_Without_Repeating_Characters.cs" />
 
- main
     <Compile Include="Generate_Parentheses.cs" />
 
     <Compile Include="index.cs" />
