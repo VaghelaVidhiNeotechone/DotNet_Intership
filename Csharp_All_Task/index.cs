@@ -57,6 +57,11 @@ namespace Csharp_All_Task
             Find_the_Index_of_the_First_Occurrence_in_a_String.run();
             Divide_Two_Integers_leetcode.run();
             Reverse_Nodes_in_k_Group.run();
+            Longest_Valid_Parentheses.run();
+            Search_in_Rotated_Sorted_Array.run();
+            Find_First_and_Last_Position_of_Element_in_Sorted_Array.run();
+            Count_and_Say.run();
+            Combination_Sum.run();
 
         }
     }
