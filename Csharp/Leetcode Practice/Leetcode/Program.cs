@@ -74,6 +74,16 @@ namespace Leetcode
             Next_Permutation.run();
 
             Longest_Valida_Parentheses.run();
+
+            Search_In_Rotated_Sorted_Array.run();
+
+            Find_First_And_Last_Position_Of_Element_In_Sorted_Array.run();
+
+            Valid_Sudoku.run();
+
+            Sudoku_Solver.run();
+
+            Count_And_Say.run();
         }
     }
 }
