@@ -44,11 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Add_Two_Numbers.cs" />
+    <Compile Include="Combination_Sum.cs" />
+    <Compile Include="Combination_Sum_II.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Count_And_Say.cs" />
     <Compile Include="Divide_Two_Integers.cs" />
     <Compile Include="Find_First_And _Last_Position_Of_Element_In_Sorted_Array.cs" />
     <Compile Include="Find_The_Index_Of_The_First_Occurrence_In_A_String.cs" />
+    <Compile Include="First_Missing_Positive.cs" />
     <Compile Include="Four_Sum.cs" />
     <Compile Include="Generate_Parentheses.cs" />
     <Compile Include="Integer_To_Roman.cs" />
