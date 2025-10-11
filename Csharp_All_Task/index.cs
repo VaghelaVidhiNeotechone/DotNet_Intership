@@ -62,7 +62,12 @@ namespace Csharp_All_Task
             Find_First_and_Last_Position_of_Element_in_Sorted_Array.run();
             Count_and_Say.run();
             Combination_Sum.run();
-
+            Next_Permutation.run();
+            Substring_with_Concatenation_of_All_Words.run();
+            validsudoku.run();
+            Combination_Sum_II.run();
+            Sudoku_Solver.run();
+            
         }
     }
 }

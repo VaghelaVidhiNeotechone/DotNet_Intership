@@ -50,6 +50,7 @@
     <Compile Include="Add_Two_Numbers.cs" />
     <Compile Include="Class_Object.cs" />
     <Compile Include="Combination_Sum.cs" />
+    <Compile Include="Combination_Sum_II.cs" />
     <Compile Include="Constructor_Encapculation.cs" />
     <Compile Include="Container_With_Most_Water.cs" />
     <Compile Include="Count_and_Say.cs" />
@@ -85,8 +86,10 @@
     <Compile Include="String_Conditional.cs" />
     <Compile Include="String_to_Integer.cs" />
     <Compile Include="Substring_with_Concatenation_of_All_Words.cs" />
+    <Compile Include="Sudoku_Solver.cs" />
     <Compile Include="Swap_Nodes_in_Pairs.cs" />
     <Compile Include="TwoSumNum.cs" />
+    <Compile Include="validsudoku.cs" />
     <Compile Include="Valid_Parentheses .cs" />
     <Compile Include="Zigzag Conversion.cs" />
   </ItemGroup>
