@@ -84,6 +84,12 @@ namespace Leetcode
             Sudoku_Solver.run();
 
             Count_And_Say.run();
+
+            Combination_Sum.run();
+
+            Combination_Sum_II.run();
+
+            First_Missing_Positive.run();
         }
     }
 }
