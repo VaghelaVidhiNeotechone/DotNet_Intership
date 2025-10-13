@@ -58,10 +58,12 @@
     <Compile Include="Divide_Two_Integers_leetcode.cs" />
     <Compile Include="Find_First_and_Last_Position_of_Element_in_Sorted_Array.cs" />
     <Compile Include="Find_the_Index_of_the_First_Occurrence_in_a_String.cs" />
+    <Compile Include="First_Missing_Positive.cs" />
     <Compile Include="Generate_Parentheses.cs" />
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Integer_to_Roman.cs" />
+    <Compile Include="Jump_Game_II.cs" />
     <Compile Include="Letter_Combinations_ofa_Phone_Number.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />
     <Compile Include="Longest_Palindromic_Substring.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Median_of_Two_Sorted_Arrays.cs" />
     <Compile Include="Merge_k_Sorted_Lists.cs" />
     <Compile Include="Merge_Two_Sorted_Lists.cs" />
+    <Compile Include="Multiply_Strings.cs" />
     <Compile Include="Next_Permutation.cs" />
     <Compile Include="Palindrome_Number.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,9 +91,11 @@
     <Compile Include="Substring_with_Concatenation_of_All_Words.cs" />
     <Compile Include="Sudoku_Solver.cs" />
     <Compile Include="Swap_Nodes_in_Pairs.cs" />
+    <Compile Include="Trapping_Rain_Water.cs" />
     <Compile Include="TwoSumNum.cs" />
     <Compile Include="validsudoku.cs" />
     <Compile Include="Valid_Parentheses .cs" />
+    <Compile Include="Wildcard_Matching.cs" />
     <Compile Include="Zigzag Conversion.cs" />
   </ItemGroup>
   <ItemGroup>

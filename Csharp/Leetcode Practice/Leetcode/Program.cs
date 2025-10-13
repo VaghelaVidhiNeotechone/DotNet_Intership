@@ -90,6 +90,16 @@ namespace Leetcode
             Combination_Sum_II.run();
 
             First_Missing_Positive.run();
+
+            Regular_Expression_Matching.run();
+
+            Trapping_Rain_Water.run();
+
+            Multiply_Strings.run();
+
+            Wildcard_Matching.run();
+
+            Jump_Game_II.run();
         }
     }
 }
