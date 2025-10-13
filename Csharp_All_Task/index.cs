@@ -67,7 +67,12 @@ namespace Csharp_All_Task
             validsudoku.run();
             Combination_Sum_II.run();
             Sudoku_Solver.run();
-            
+            First_Missing_Positive.run();
+            Trapping_Rain_Water.run();
+            Multiply_Strings.run();
+            Wildcard_Matching.run();
+            Jump_Game_II.run();
+
         }
     }
 }
