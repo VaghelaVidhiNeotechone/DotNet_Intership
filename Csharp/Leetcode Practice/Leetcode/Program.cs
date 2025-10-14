@@ -100,6 +100,10 @@ namespace Leetcode
             Wildcard_Matching.run();
 
             Jump_Game_II.run();
+
+            Permutation.run();
+
+            Permutations_II.run();
         }
     }
 }
