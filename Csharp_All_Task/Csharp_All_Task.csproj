@@ -60,6 +60,7 @@
     <Compile Include="Find_the_Index_of_the_First_Occurrence_in_a_String.cs" />
     <Compile Include="First_Missing_Positive.cs" />
     <Compile Include="Generate_Parentheses.cs" />
+    <Compile Include="Group_Anagrams.cs" />
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Integer_to_Roman.cs" />
@@ -76,6 +77,8 @@
     <Compile Include="Multiply_Strings.cs" />
     <Compile Include="Next_Permutation.cs" />
     <Compile Include="Palindrome_Number.cs" />
+    <Compile Include="Permutations.cs" />
+    <Compile Include="Permutations_II.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Regular_Expression_Matching.cs" />
     <Compile Include="Remove_Duplicates_from_Sorted_Array.cs" />
@@ -84,6 +87,7 @@
     <Compile Include="Reverse_Integer.cs" />
     <Compile Include="Reverse_Nodes_in_k-Group.cs" />
     <Compile Include="Roman_to_Integer.cs" />
+    <Compile Include="Rotate_Image.cs" />
     <Compile Include="Search_Insert_Position.cs" />
     <Compile Include="Search_in_Rotated_Sorted_Array.cs" />
     <Compile Include="String_Conditional.cs" />
