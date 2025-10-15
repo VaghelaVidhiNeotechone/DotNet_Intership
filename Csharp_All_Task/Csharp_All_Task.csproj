@@ -64,6 +64,7 @@
     <Compile Include="index.cs" />
     <Compile Include="Inheritace_Polymorphism.cs" />
     <Compile Include="Integer_to_Roman.cs" />
+    <Compile Include="Jump_Game.cs" />
     <Compile Include="Jump_Game_II.cs" />
     <Compile Include="Letter_Combinations_ofa_Phone_Number.cs" />
     <Compile Include="Longest_Common_Prefix.cs" />

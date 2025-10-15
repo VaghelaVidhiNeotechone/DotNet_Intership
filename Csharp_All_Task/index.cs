@@ -81,6 +81,7 @@ namespace Csharp_All_Task
             Spiral_Matrix.run();
             N_Queens.run();
             N_Queens_II.run();
+            Jump_Game.run();
 
         }
     }
