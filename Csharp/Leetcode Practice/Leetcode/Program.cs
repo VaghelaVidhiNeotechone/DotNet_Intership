@@ -100,6 +100,26 @@ namespace Leetcode
             Wildcard_Matching.run();
 
             Jump_Game_II.run();
+
+            Permutation.run();
+
+            Permutations_II.run();
+
+            Rotate_Image.run();
+
+            Group_Anagrams.run();
+
+            Pow_x_n_.run();
+
+            N_Queens.run();
+
+            N_Queens_II.run();
+
+            Maximum_Subarray.run();
+
+            Spiral_Matrix.run();
+
+            Jump_Game.run();
         }
     }
 }
