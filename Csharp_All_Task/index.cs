@@ -72,6 +72,16 @@ namespace Csharp_All_Task
             Multiply_Strings.run();
             Wildcard_Matching.run();
             Jump_Game_II.run();
+            Permutations.run();
+            Permutations_II.run();
+            Rotate_Image.run();
+            Group_Anagrams.run();
+            Pow_x_n.run();
+            Maximum_Subarray_sum.run();
+            Spiral_Matrix.run();
+            N_Queens.run();
+            N_Queens_II.run();
+            Jump_Game.run();
 
         }
     }
