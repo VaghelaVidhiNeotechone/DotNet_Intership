@@ -120,6 +120,16 @@ namespace Leetcode
             Spiral_Matrix.run();
 
             Jump_Game.run();
+
+            Merge_Intervals.run();
+
+            Insert_Intervals.run();
+
+            Length_Of_Last_Word.run();
+
+            Spiral_Matrix_II.run();
+
+            Permutation_Sequence.run();
         }
     }
 }
