@@ -82,7 +82,11 @@ namespace Csharp_All_Task
             N_Queens.run();
             N_Queens_II.run();
             Jump_Game.run();
-
+            Merge_Intervals.run();
+            Insert_Interval.run();
+            Length_of_Last_Word_leetcode.run();
+            Spiral_Matrix_II.run();
+            Permutation_Sequence_leetcode.run();
         }
     }
 }
