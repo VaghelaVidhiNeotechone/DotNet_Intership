@@ -37,7 +37,7 @@ namespace Csharp_All_Task
             foreach (string s in testStrings)
             {
                 bool isValid = obj.IsNumber(s);
-                Console.WriteLine($"\"{s}\" -> {(isValid ? "Valid Number ✅" : "Invalid ❌")}");
+                Console.WriteLine($"\"{s}\" -> {(isValid ? "Valid Number " : "Invalid ")}");
             }
             Console.WriteLine("\nEnter a string to test (or press Enter to exit):");
             while (true)
@@ -47,7 +47,7 @@ namespace Csharp_All_Task
                 if (string.IsNullOrWhiteSpace(input)) break;
 
                 bool isValid = obj.IsNumber(input);
-                Console.WriteLine(isValid ? "✅ Valid number" : "❌ Invalid number");
+                Console.WriteLine(isValid ? " Valid number" : " Invalid number");
             }
         }
     }
