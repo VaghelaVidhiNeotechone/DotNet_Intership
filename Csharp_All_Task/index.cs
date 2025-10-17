@@ -87,6 +87,11 @@ namespace Csharp_All_Task
             Length_of_Last_Word_leetcode.run();
             Spiral_Matrix_II.run();
             Permutation_Sequence_leetcode.run();
+            Rotate_List.run();
+            Unique_Paths.run();
+            Unique_Paths_II.run();
+            Minimum_Path_Sum.run();
+            Valid_Number.run();
         }
     }
 }
