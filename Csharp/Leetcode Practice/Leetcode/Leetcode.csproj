@@ -70,6 +70,7 @@
     <Compile Include="Merge_Intervals.cs" />
     <Compile Include="Merge_k_Sorted_Lists.cs" />
     <Compile Include="Merge_Two_Sorted_Lists.cs" />
+    <Compile Include="Minimum_Path_Sum.cs" />
     <Compile Include="Multiply_Strings.cs" />
     <Compile Include="N-Queens.cs" />
     <Compile Include="N-Queens_II.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Reverse_Nodes_In_K-Group.cs" />
     <Compile Include="Roman_To_Integer.cs" />
     <Compile Include="Rotate_Image.cs" />
+    <Compile Include="Rotate_List.cs" />
     <Compile Include="Search_Insert_Position.cs" />
     <Compile Include="Search_In_Rotated_Sorted_Array.cs" />
     <Compile Include="Spiral_Matrix.cs" />
@@ -101,6 +103,9 @@
     <Compile Include="Three_Sum_Closest.cs" />
     <Compile Include="Trapping_Rain_Water.cs" />
     <Compile Include="Two_Sum.cs" />
+    <Compile Include="Unique_Paths-II.cs" />
+    <Compile Include="Unique_Paths.cs" />
+    <Compile Include="Valid_Number.cs" />
     <Compile Include="Valid_Parentheses.cs" />
     <Compile Include="Valid_Sudoku.cs" />
     <Compile Include="Wildcard_Matching.cs" />
