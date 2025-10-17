@@ -130,6 +130,16 @@ namespace Leetcode
             Spiral_Matrix_II.run();
 
             Permutation_Sequence.run();
+
+            Rotate_List.run();
+
+            Unique_Paths.run();
+
+            Unique_Paths_II.run();
+
+            Minimum_Path_Sum.run();
+
+            Valid_Number.run();
         }
     }
 }
