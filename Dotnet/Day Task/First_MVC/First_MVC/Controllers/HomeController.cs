@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using First_MVC.Filters;
 using First_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +14,17 @@ namespace First_MVC.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [LogActionFilter]
+        public ActionResult Index()
         {
+            ViewBag.Message = "Welcome to Custom Action Filter Example!";
             return View();
         }
+
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {
