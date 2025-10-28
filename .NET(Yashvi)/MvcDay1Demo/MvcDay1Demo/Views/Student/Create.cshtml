@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MvcCrudDemo.Models.Student
+
+<h2>Create New Student</h2>
+
+@using (Html.BeginForm())
+{
+    <p>ID: (auto-generated)</p>
+    <p>Name: @Html.TextBoxFor(m => m.Name)</p>
+    <p>Age: @Html.TextBoxFor(m => m.Age)</p>
+    <p>Email: @Html.TextBoxFor(m => m.Email)</p>
+    <button type="submit">Create</button>
+}
+<a href="/Student/Index">Back</a>
+
+
