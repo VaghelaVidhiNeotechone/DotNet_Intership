@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Links, Colors & Images Example</title>
+<link rel="stylesheet" href="images.css">
+</head>
+<body>
+
+  <h1>HTML - Text, Colours, Links & Images</h1>
+
+  <h2>Quotations</h2>
+  <p>Here is a short quote:</p>
+  <blockquote cite="https://www.google.com">
+    “The best way to learn HTML is by practicing it every day.”
+  </blockquote>
+  <p>Someone once said, <q>Practice makes perfect!</q></p>
+
+  <h2>Colours</h2>
+  <p class="color-demo" style="color: blue;">Named color example: blue text</p>
+  <p class="color-demo" style="color: rgb(255, 0, 0);">RGB color example: red text</p>
+  <p class="color-demo" style="color: #008000;">HEX color example: green text</p>
+  <p class="color-demo" style="color: hsl(200, 100%, 40%);">HSL color example: teal text</p>
+
+  <h2>Links</h2>
+  <p>Visit <a href="https://www.google.com" target="_blank">Google</a> in a new tab.</p>
+  <p><a href="#bookmark">Jump to the bookmark below </a></p>
+
+  <h2>Images</h2>
+  <p>Basic image example:</p>
+  <img src="images/bg1.jpg"
+       alt="HTML5 Logo" width="150">
+
+  <h3>Clickable Image Map</h3>
+  <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400">
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" href="images/img_white_flower.jpg" >
+    <area shape="rect" coords="290,172,333,250" href="images/img_girl.jpg" >
+  </map>
+
+  <h2 id="bookmark">This is the Bookmark Section </h2>
+  <p>You jumped here using a bookmark link!</p>
+
+</body>
+</html>
