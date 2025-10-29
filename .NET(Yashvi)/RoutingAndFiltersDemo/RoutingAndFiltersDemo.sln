@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingAndFiltersDemo", "RoutingAndFiltersDemo\RoutingAndFiltersDemo.csproj", "{51FFD34B-1D10-44E8-AF60-93B43C8CEBD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FFD34B-1D10-44E8-AF60-93B43C8CEBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FFD34B-1D10-44E8-AF60-93B43C8CEBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FFD34B-1D10-44E8-AF60-93B43C8CEBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FFD34B-1D10-44E8-AF60-93B43C8CEBD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22CBF345-BEFB-428B-A444-59AB3FEBF40E}
+	EndGlobalSection
+EndGlobal
