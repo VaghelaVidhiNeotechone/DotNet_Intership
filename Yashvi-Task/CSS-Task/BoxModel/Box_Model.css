@@ -1,0 +1,117 @@
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Card Container */
+.card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.card h2 {
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+/* Box Model Demo */
+.box {
+  background: lightblue;
+  padding: 20px;
+  border: 5px solid navy;
+  margin: 15px;
+  text-align: center;
+}
+
+/* Width & Height Demo */
+.fixed-box {
+  width: 150px;
+  height: 80px;
+  background: coral;
+  border: 3px solid darkred;
+  padding: 10px;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px auto;
+}
+
+/* Box-Sizing Demo */
+.box-sizing-demo {
+  width: 150px;
+  height: 80px;
+  padding: 10px;
+  border: 3px solid green;
+  background: lightgreen;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px auto;
+}
+
+/* Display Types */
+.display-types span {
+  margin: 5px;
+  padding: 10px;
+  background: yellow;
+  border: 2px solid orange;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+/* Visibility */
+.visible {
+  background: lightgreen;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+  background: lightcoral;
+  padding: 10px;
+}
+
+/* Overflow Demo */
+.overflow-box {
+  height: 150px;
+  border: 2px solid purple;
+  padding: 10px;
+  overflow: auto;
+  background: lavender;
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 5px;
+  border-bottom: 2px solid purple;
+  margin: -10px -10px 10px -10px;
+}
