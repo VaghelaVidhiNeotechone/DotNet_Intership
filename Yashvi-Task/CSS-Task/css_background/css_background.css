@@ -1,0 +1,25 @@
+
+            body{
+                background: antiquewhite    no-repeat right top ;
+                color: blue;
+      
+            }
+            h1{border-style:dotted ;margin-top:15PX ;margin-bottom:40PX ;
+                margin-left: 10PX;margin-right: 20PX;padding-top: 20px;
+                padding-left: 20px;padding-bottom: 20px;padding-right: 20px;
+                color: brown;
+                background-color: aquamarine;
+                text-align: justify;
+                direction: rtl;
+                unicode-bidi: bidi-override;
+                text-decoration: overline;
+            }
+            h2{
+                text-align: left;
+                text-decoration: line-through;
+                text-transform: capitalize;
+            }
+            h3{
+                text-align: right;
+                text-decoration: underline;
+            }

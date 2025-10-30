@@ -1,0 +1,6 @@
+@Dotnet_Run_Messages_HostAddress = http://localhost:5043
+
+GET {{Dotnet_Run_Messages_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
