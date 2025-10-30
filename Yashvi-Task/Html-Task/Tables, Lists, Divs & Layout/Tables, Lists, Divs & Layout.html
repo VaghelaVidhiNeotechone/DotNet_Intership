@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tables, Lists & Layout Example</title>
+ <link rel="stylesheet" href="table_div_layout.css">
+</head>
+<body>
+
+  <h1>HTML Tables, Lists, and Layout</h1>
+
+  <h2>Table Example</h2>
+  <table>
+    <colgroup>
+      <col style="background-color: #fce7f3;">
+      <col style="background-color: #e0f2fe;">
+      <col style="background-color: #fef9c3;">
+    </colgroup>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    <tr>
+      <td>Apples</td>
+      <td>200</td>
+      <td rowspan="2">5 kg</td>
+    </tr>
+    <tr>
+      <td>Bananas</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <td colspan="3">Total: 500</td>
+    </tr>
+  </table>
+
+  <h2>Lists Example</h2>
+  <h3>Unordered List</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <h3>Ordered List</h3>
+  <ol>
+    <li>Plan</li>
+    <li>Design</li>
+    <li>Develop</li>
+  </ol>
+
+  <h3>Definition List</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Structure of a webpage</dd>
+    <dt>CSS</dt>
+    <dd>Style and layout</dd>
+  </dl>
+
+  <h2>Block vs Inline Elements</h2>
+  <div style="background-color: lightgray; padding: 10px;">This is a block element (div)</div>
+  <p>This is a <span>span</span> inside a paragraph (inline element)</p>
+
+  <h2>Divs, Classes, and IDs</h2>
+  <div class="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box" id="box3">Box 3</div>
+  </div>
+
+  <h2>Iframe Example</h2>
+  <iframe src="https://www.wikipedia.org" width="400" height="250" title="Wikipedia"></iframe>
+
+  <h2>File Path Example</h2>
+  <p>Example of relative path:</p>
+  <img src="images/audi.jpg" alt="Logo" width="100">
+  <p>Example of absolute path:</p>
+  <img src="images/logo1.jpg" alt="React Logo" width="100">
+
+</body>
+</html>

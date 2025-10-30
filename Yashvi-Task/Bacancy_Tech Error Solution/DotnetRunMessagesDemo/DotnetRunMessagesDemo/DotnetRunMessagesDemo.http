@@ -1,0 +1,6 @@
+@DotnetRunMessagesDemo_HostAddress = http://localhost:5128
+
+GET {{DotnetRunMessagesDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

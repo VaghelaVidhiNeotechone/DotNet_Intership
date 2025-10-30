@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-4</title>
+</head>
+<body>
+  <h1>Open the browser console to see the output</h1>
+  <h3>Example IF_ELSE</h3>
+  <p id="demo"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo1"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo2"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo3"></p>
+  <h3>Example SWITCH</h3>
+  <p id="demo4"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <h3>Example BOOLEAN</h3>
+  <p id="demo5"></p>
+  <h3>Example LOOPS</h3>
+  <p id="demo6"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo7"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo8"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo9"></p>
+  <p>---------------------------------------------------------------------------------------------</p>
+  <p id="demo0"></p>
+    <script>
+      if(new Date().getHours()){
+document.getElementById("demo").innerHTML="GOOD DAY!";
+console.log("GOOD DAY!");
+      }
+console.log("-----------------------------------------------")
+
+      const hour= new Date().getHours();
+      let greeting;
+      if(hour<10){
+        greeting="GOOD DAY!";
+      }
+      else{
+        greeting="GOOD EVENING";
+      }
+      document.getElementById("demo1").innerHTML=greeting;
+      console.log(greeting);
+      
+console.log("-----------------------------------------------");
+
+      const time=new Date().getHours();
+      let greet;
+      if(time<12){
+        greet="GOOD MORNING";
+      }
+      else if(time<20){
+        greet="GOOD DAY";
+      }
+      else{
+        greet="GOOD EVENING";
+      }
+      document.getElementById("demo2").innerHTML=greet;
+      console.log(greet);
+
+console.log("-----------------------------------------------");
+
+    
+      let ifelse;
+      if(Math.random()<0.6){
+        ifelse="<a href='https://w3schools.com'> W3 SCHOOL";
+      }
+      else{
+        ifelse="<a href='https://wwf.org'>visit WWP";
+      }
+      document.getElementById("demo3").innerHTML=ifelse;
+      console.log(ifelse);
+
+console.log("-----------------------------------------------");
+
+      let day;
+      switch(new Date().getDay()){
+        case 0:
+        day="Sunday";
+        break;
+        case 1:
+        day="Monday";
+        break;
+        case 2:
+        day="Tuesday";
+        break;
+        case 3:
+        day="Wednesday";
+        break;
+        case 4:
+        day="Thursday";
+        break;
+        case 5:
+        day="Friday";
+        break;
+         case 6:
+        day="Saturday";
+        break;
+        default:
+        day="Looking Forward to weekend"
+        
+      }
+      document.getElementById("demo4").innerHTML="Today is "+day;
+      console.log("Today is "+day);
+      
+      console.log("-----------------------------------------------");
+
+      let x=4;
+      document.getElementById("demo5").innerHTML=(x==4);
+      console.log(x!=4);
+
+      console.log("-----------------------------------------------");
+
+      const cars=["BMW","Volvo","Ford","Audi"];
+      let text="";
+      for(let i=0;i<cars.length;i++){
+        text+=cars[i]+"<br>";
+      }
+
+      document.getElementById("demo6").innerHTML=text;
+      console.log(text);
+
+      console.log("-----------------------------------------------");
+
+      const person={fname:"Yashvi",lname:"Dhaduk",age:21};
+      let text1="";
+
+      for(let x in person){
+        text1+=person[x]+" ";
+      }
+      document.getElementById("demo7").innerHTML=text1;
+      console.log(text1);
+
+      console.log("-----------------------------------------------")
+
+      const number=[2,45,23,76];
+
+      let txt="";
+      for(let x of number){
+        txt+=x+"<br>";
+      }
+      document.getElementById("demo8").innerHTML=txt;
+      console.log(x);
+
+      console.log("-----------------------------------------------")
+
+      let text2="";
+      let i=0;
+      do{        
+        text2+="<br> The Number Is "+i;
+        i++;
+      }while(i<10);
+      document.getElementById("demo9").innerHTML=text2;
+      
+      console.log("-----------------------------------------------");
+
+      let txt1="";
+      for(let i=0;i<10;i++){
+        if(i===4){continue;}
+        txt1+="The Nmumber is "+i+"<br>";
+      }
+      document.getElementById("demo0").innerHTML=txt1;
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Conditions & Loops Example</title>
+</head>
+<body>
+<h2>JavaScript Example</h2>
+<div id="output"></div>
+
+<script src="Conditions_Loops.js"></script>
+</body>
+</html>
+
+
+
+
