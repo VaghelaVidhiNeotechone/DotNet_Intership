@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model IEnumerable<crud_mvc.Models.Student>
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<div class="container mt-4">
+    <h2>Students List</h2>
+    <a class="btn btn-primary mb-3" asp-action="Create">Add New Student</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.FullName</td>
+                    <td>@student.Age</td>
+                    <td>@student.Email</td>
+                    <td>@student.Gender</td> 
+
+                    <td>
+                        @if (!string.IsNullOrEmpty(student.ProfileImagePath))
+                        {
+                            <img src="@student.ProfileImagePath" width="100" height="50" style="border-radius:10%;" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@student.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
