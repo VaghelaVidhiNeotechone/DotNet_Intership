@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "AJAX CRUD Demo";
+}
+
+<h2>Employee Management</h2>
+
+<div class="form-group">
+    <input type="hidden" id="EmployeeID" />
+    <input type="text" id="EmpName" placeholder="Name" class="form-control mb-2" />
+    <input type="email" id="Email" placeholder="Email" class="form-control mb-2" />
+    <input type="number" id="Age" placeholder="Age" class="form-control mb-2" />
+    <input type="text" id="Department" placeholder="Department" class="form-control mb-2" />
+    <input type="date" id="JoinDate" class="form-control mb-2" />
+
+    <button id="btnSave" class="btn btn-success">Add Employee</button>
+    <button id="btnUpdate" class="btn btn-warning" style="display:none;">Update Employee</button>
+    <button id="btnCancel" class="btn btn-secondary" style="display:none;">Cancel</button>
+</div>
+
+<hr />
+
+<div id="employeeList">
+    <!-- Partial view will be loaded here -->
+</div>
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            loadEmployees();
+
+            // Add new employee
+            $('#btnSave').click(function () {
+                var emp = {
+                    EmpName: $('#EmpName').val(),
+                    Email: $('#Email').val(),
+                    Age: $('#Age').val(),
+                    Department: $('#Department').val(),
+                    JoinDate: $('#JoinDate').val()
+                };
+
+                $.ajax({
+                    url: '@Url.Action("Create", "Employees")',
+                    type: 'POST',
+                    data: emp,
+                    success: function (res) {
+                        if (res.success) {
+                            loadEmployees();
+                            clearInputs();
+                        } else {
+                            alert("Failed to save data.");
+                        }
+                    }
+                });
+            });
+
+            // Delete
+            $(document).on('click', '.delete-btn', function () {
+                var id = $(this).data('id');
+                if (confirm("Delete this record?")) {
+                    $.post('@Url.Action("Delete", "Employees")', { id: id }, function (res) {
+                        if (res.success) {
+                            loadEmployees();
+                        }
+                    });
+                }
+            });
+
+            // Edit
+            $(document).on('click', '.edit-btn', function () {
+                $('#EmployeeID').val($(this).data('id'));
+                $('#EmpName').val($(this).data('name'));
+                $('#Email').val($(this).data('email'));
+                $('#Age').val($(this).data('age'));
+                $('#Department').val($(this).data('dept'));
+                $('#JoinDate').val($(this).data('joindate'));
+
+                $('#btnSave').hide();
+                $('#btnUpdate').show();
+                $('#btnCancel').show();
+            });
+
+            // Update
+            $('#btnUpdate').click(function () {
+                var emp = {
+                    EmployeeID: $('#EmployeeID').val(),
+                    EmpName: $('#EmpName').val(),
+                    Email: $('#Email').val(),
+                    Age: $('#Age').val(),
+                    Department: $('#Department').val(),
+                    JoinDate: $('#JoinDate').val()
+                };
+
+                $.ajax({
+                    url: '@Url.Action("Update", "Employees")',
+                    type: 'POST',
+                    data: emp,
+                    success: function (res) {
+                        if (res.success) {
+                            loadEmployees();
+                            clearInputs();
+                            resetButtons();
+                        }
+                    }
+                });
+            });
+
+            // Cancel
+            $('#btnCancel').click(function () {
+                clearInputs();
+                resetButtons();
+            });
+
+            function loadEmployees() {
+                $('#employeeList').load('@Url.Action("GetEmployees", "Employees")');
+            }
+
+            function clearInputs() {
+                $('#EmployeeID').val('');
+                $('#EmpName').val('');
+                $('#Email').val('');
+                $('#Age').val('');
+                $('#Department').val('');
+                $('#JoinDate').val('');
+            }
+
+            function resetButtons() {
+                $('#btnSave').show();
+                $('#btnUpdate').hide();
+                $('#btnCancel').hide();
+            }
+        });
+    </script>
+}

@@ -1,0 +1,42 @@
+﻿@* @{ *@
+@*     ViewData["Title"] = "Home Page"; *@
+@* } *@
+
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+
+@{
+    ViewData["Title"] = "AJAX Example in ASP.NET Core MVC";
+}
+
+<h2>AJAX Example (ASP.NET Core MVC)</h2>
+
+<div id="timeContainer">
+</div>
+
+<button id="btnGetTime" class="btn btn-primary">
+    get the time
+</button>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnGetTime").click(function () {
+                $.ajax({
+                    url: '@Url.Action("GetTime", "Home")',
+                    type: 'GET',
+                    success: function (result) {
+                        $("#timeContainer").html(result);
+                    },
+                    error: function () {
+                        alert("An error has occurred!");
+                    }
+                });
+            });
+        });
+    </script>
+}

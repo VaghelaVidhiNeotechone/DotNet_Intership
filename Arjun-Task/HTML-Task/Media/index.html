@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Practice – Media Elements</h1>
+  <p>In this exercise, you’ll learn how to add and control <strong>videos</strong> and <strong>audio</strong> in HTML5.</p>
+
+  <!-- VIDEO SECTION -->
+  <section class="media-container">
+    <h2>Video Examples</h2>
+
+    <p><strong>1. Basic Video with Controls</strong></p>
+    <video width="480" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+
+    <p><strong>2. Autoplay, Loop & Muted Video</strong></p>
+    <video width="480" autoplay loop muted>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p><strong>3. Poster Image Example</strong></p>
+    <video width="480" controls poster="https://www.w3schools.com/html/img_girl.jpg">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p><em>Note:</em> The <code>poster</code> attribute displays an image before the video plays.</p>
+  </section>
+
+  <!-- AUDIO SECTION -->
+  <section class="media-container">
+    <h2>Audio Examples</h2>
+
+    <p><strong>1. Basic Audio with Controls</strong></p>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p><strong>2. Autoplay & Loop Example</strong></p>
+    <audio controls autoplay loop>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p><em>Note:</em> <code>autoplay</code> may be blocked by browsers until the user interacts with the page (for user experience reasons).</p>
+  </section>
+
+  <!-- ATTRIBUTES SUMMARY -->
+  <section class="media-container">
+    <h2>Media Tag Attributes Summary</h2>
+    <ul>
+      <li><code>controls</code> — shows play/pause/volume buttons</li>
+      <li><code>autoplay</code> — starts playing automatically</li>
+      <li><code>loop</code> — restarts after ending</li>
+      <li><code>muted</code> — starts muted</li>
+      <li><code>poster</code> (video only) — image shown before playback</li>
+      <li><code>preload</code> — hints how media should be loaded (<code>auto</code>, <code>metadata</code>, <code>none</code>)</li>
+    </ul>
+  </section>
+
+</body>
+</html>
