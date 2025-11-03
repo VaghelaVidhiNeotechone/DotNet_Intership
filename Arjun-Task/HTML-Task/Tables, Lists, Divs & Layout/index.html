@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #666;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    ol {
+      list-style-type: upper-roman;
+    }
+
+    .container {
+      border: 2px solid #ccc;
+      padding: 15px;
+      background-color: white;
+      margin-bottom: 20px;
+    }
+
+    #highlight {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 50%;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+    }
+
+    colgroup col:first-child {
+      background-color: #d9f7d9;
+    }
+
+    colgroup col:nth-child(2) {
+      background-color: #f7d9d9;
+    }
+  </style>
+</head>
+<body>
+    <h1>HTML Practice – Tables, Lists, Layout & More</h1>
+
+  <!-- TABLES -->
+  <h2>Tables</h2>
+  <p>Basic Table with Borders, Padding, and Colspan/Rowspan:</p>
+
+  <table>
+    <colgroup>
+      <col span="1">
+      <col span="1">
+      <col span="1">
+    </colgroup>
+
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Harry</td>
+      <td>Potter</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td colspan="2">Total People</td>
+      <td>2</td>
+    </tr>
+  </table>
+
+  <p>Rowspan Example:</p>
+  <table>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="2">Contact Info</th>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>john@example.com</td>
+      <td>123-4567</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- LISTS -->
+  <h2>Lists</h2>
+
+  <h3>Unordered List</h3>
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+
+  <h3>Ordered List</h3>
+  <ol>
+    <li>Wake up</li>
+    <li>Brush teeth</li>
+    <li>Eat breakfast</li>
+  </ol>
+
+  <h3>Description List</h3>
+  <dl>
+    <dt>HTML</dt>
+    <dd>A markup language for creating webpages.</dd>
+    <dt>CSS</dt>
+    <dd>Used for styling HTML documents.</dd>
+  </dl>
+
+  <hr>
+
+  <!-- BLOCK VS INLINE ELEMENTS -->
+  <h2>Block vs Inline Elements</h2>
+  <div class="container">
+    <p><strong>Block elements</strong> start on a new line and take up the full width available (e.g., &lt;div&gt;, &lt;p&gt;).</p>
+    <p><strong>Inline elements</strong> do not start on a new line and only take up as much width as necessary (e.g., &lt;span&gt;, &lt;a&gt;).</p>
+    <p>Example: This is a <span id="highlight">highlighted inline span</span> inside a paragraph.</p>
+  </div>
+
+  <hr>
+
+  <!-- DIVs, CLASSES, IDs -->
+  <h2>Divs, Classes, and IDs</h2>
+  <div class="container">
+    <h3>Div Container Example</h3>
+    <p>This text is inside a &lt;div&gt; with a <strong>class="container"</strong>.</p>
+  </div>
+
+  <div id="highlight">
+    <p>This is a &lt;div&gt; with <strong>id="highlight"</strong>.</p>
+  </div>
+  
+  <hr>
+
+  <!-- LAYOUT & RESPONSIVE BASICS -->
+  <h2>Basic Layout & Responsive Design</h2>
+  <div class="row">
+    <div class="column" style="background-color:#f2f2f2;">
+      <h3>Column 1</h3>
+      <p>This is the first column in a responsive layout.</p>
+    </div>
+    <div class="column" style="background-color:#ddd;">
+      <h3>Column 2</h3>
+      <p>This is the second column. On smaller screens, it stacks below Column 1.</p>
+    </div>
+  </div>
+
+  <p>Resize the browser window to see the responsive layout in action!</p>
+</body>
+</html>
