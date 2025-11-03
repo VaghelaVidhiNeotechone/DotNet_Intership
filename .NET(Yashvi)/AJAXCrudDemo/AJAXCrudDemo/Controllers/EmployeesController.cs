@@ -15,113 +15,61 @@ namespace AJAXCrudDemo.Controllers
         private AJAXCrudDemoDBEntities db = new AJAXCrudDemoDBEntities();
 
         // GET: Employees
+
         public ActionResult Index()
-        {
-            return View(db.Employees.ToList());
-        }
-
-        // GET: Employees/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employee employee = db.Employees.Find(id);
-            if (employee == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employee);
-        }
-
-        // GET: Employees/Create
-        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Employees/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        public PartialViewResult GetEmployees()
+        {
+            var employees = db.Employees.ToList();
+            return PartialView("_EmployeeList", employees);
+        }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EmployeeID,EmpName,Email,Age,Department,JoinDate")] Employee employee)
+        public JsonResult Create(Employee emp)
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employee);
+                db.Employees.Add(emp);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(new { success = true });
             }
-
-            return View(employee);
+            return Json(new { success = false });
         }
 
-        // GET: Employees/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employee employee = db.Employees.Find(id);
-            if (employee == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employee);
-        }
-
-        // POST: Employees/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmployeeID,EmpName,Email,Age,Department,JoinDate")] Employee employee)
+        public JsonResult Update(Employee emp)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(employee).State = (System.Data.Entity.EntityState)System.Data. EntityState.Modified;
+                var existing = db.Employees.Find(emp.EmployeeID);
+                if (existing != null)
+                {
+                    existing.EmpName = emp.EmpName;
+                    existing.Email = emp.Email;
+                    existing.Age = emp.Age;
+                    existing.Department = emp.Department;
+                    existing.JoinDate = emp.JoinDate;
+                    db.SaveChanges();
+                    return Json(new { success = true });
+                }
+            }
+            return Json(new { success = false });
+        }
+
+        [HttpPost]
+        public JsonResult Delete(int id)
+        {
+            var emp = db.Employees.Find(id);
+            if (emp != null)
+            {
+                db.Employees.Remove(emp);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(new { success = true });
             }
-            return View(employee);
-        }
-
-        // GET: Employees/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employee employee = db.Employees.Find(id);
-            if (employee == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employee);
-        }
-
-        // POST: Employees/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Employee employee = db.Employees.Find(id);
-            db.Employees.Remove(employee);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            return Json(new { success = false });
         }
     }
 }

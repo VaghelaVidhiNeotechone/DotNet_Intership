@@ -6,19 +6,38 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AJAXCrudDemo.Models
+
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Employee
     {
+
+        [Key]
         public int EmployeeID { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string EmpName { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string Email { get; set; }
+
+        [Required]
         public int Age { get; set; }
+
+        [Required]
+        [StringLength(100)]
         public string Department { get; set; }
-        public System.DateTime JoinDate { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime JoinDate { get; set; }
     }
 }

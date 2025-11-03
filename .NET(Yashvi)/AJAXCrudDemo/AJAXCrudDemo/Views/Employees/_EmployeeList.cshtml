@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AJAXCrudDemo.Models.Employee>
+
+<table class="table table-bordered table-striped mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Join Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.EmployeeID</td>
+                    <td>@emp.EmpName</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.Age</td>
+                    <td>@emp.Department</td>
+                    <td>@emp.JoinDate.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning edit-btn"
+                                data-id="@emp.EmployeeID"
+                                data-name="@emp.EmpName"
+                                data-email="@emp.Email"
+                                data-age="@emp.Age"
+                                data-dept="@emp.Department"
+                                data-joindate="@emp.JoinDate.ToString("yyyy-MM-dd")">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger delete-btn"
+                                data-id="@emp.EmployeeID">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center text-muted">No employees found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
