@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Practice – Quotations, Colors, Links & Images</h1>
+
+    <!-- Quotations -->
+    <h2>Quotations</h2>
+    <p>Here’s a short quote using the <code>&lt;q&gt;</code> tag:</p>
+    <p>Einstein once said, <q>Imagination is more important than knowledge.</q></p>
+
+    <p>And here’s a longer blockquote:</p>
+    <blockquote cite="https://www.goodreads.com/quotes">
+        The future belongs to those who believe in the beauty of their dreams.  
+        — <strong>Eleanor Roosevelt</strong>
+    </blockquote>
+
+    <p>The <abbr title="World Wide Web">WWW</abbr> is an example of an abbreviation tag.</p>
+
+    <hr>
+
+    <!-- Colors -->
+    <h2>Colors</h2>
+    <div class="color-example" style="background-color: red;">Named color: red</div>
+    <div class="color-example" style="background-color: rgb(0, 128, 0);">RGB color: rgb(0, 128, 0)</div>
+    <div class="color-example" style="background-color: #0000ff;">HEX color: #0000ff</div>
+    <div class="color-example" style="background-color: hsl(200, 100%, 50%);">HSL color: hsl(200, 100%, 50%)</div>
+
+    <hr>
+
+    <!-- Links -->
+    <h2>Links</h2>
+    <p><a href="https://www.example.com" target="_blank" title="Visit Example.com">Visit Example Website</a></p>
+    <p><a href="#bookmark">Go to Bookmark Example (same page link)</a></p>
+    <p><a href="#top">Back to Top</a></p>
+
+    <hr>
+
+    <!-- Images -->
+    <h2>Images</h2>
+    <p>Basic image example:</p>
+    <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Beautiful landscape" width="400" height="250">
+
+    <p>Image map example (clickable areas on one image):</p>
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="300">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" href="https://www.w3schools.com/html/" alt="Computer">
+        <area shape="circle" coords="337,300,44" href="https://www.w3schools.com/css/" alt="Coffee">
+    </map>
+
+    <p>Picture element (different images for screen sizes):</p>
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Picture example" style="width:auto;">
+    </picture>
+
+    <hr>
+
+    <!-- Background Image -->
+    <h2>Background Image Example</h2>
+    <div style="
+        background-image: url('https://www.w3schools.com/html/img_tree.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: white;
+    ">
+        <p>This box has a background image of a tree aligned to the right.</p>
+    </div>
+
+    <hr id="bookmark">
+    <h2>Bookmark Example</h2>
+    <p>This is the bookmarked section. You can link to this area using an ID (#bookmark).</p>
+
+    <p><a href="#top">Back to top</a></p>
+</body>
+</html>
