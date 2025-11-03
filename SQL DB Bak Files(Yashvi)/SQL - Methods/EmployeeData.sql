@@ -1,5 +1,5 @@
 use CompanyDB;
-
+Go
 create table employee(
 	EmployeeID int identity(1,1) primary key,
 	EmplyeeName varchar(50),
@@ -40,3 +40,4 @@ select * from employee where Salary between 50000 AND 60000;
 SELECT * FROM employee ORDER BY Salary DESC;
 
 SELECT EmplyeeName, Department, Salary FROM employee WHERE Department = 'IT' AND EmplyeeName LIKE '%i%' ORDER BY Salary asc;
+
