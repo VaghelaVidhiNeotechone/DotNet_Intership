@@ -7,6 +7,9 @@ create table Employees (
     Salary INT
 );
 
+ALTER TABLE Employees ADD Score DECIMAL(5,2);
+
+
 create table Departments (
     DeptID INT PRIMARY KEY,
     DeptName VARCHAR(50)
@@ -18,6 +21,13 @@ insert into Employees values
 (3, 'arya', 101, 55000),
 (4, 'shivani', 103, 45000),
 (5, 'xyz', NULL, 40000);
+
+UPDATE Employees SET Score = 7.5 WHERE EmpID = 1;
+UPDATE Employees SET Score = 8.0 WHERE EmpID = 2;
+UPDATE Employees SET Score = 7.5 WHERE EmpID = 3;
+UPDATE Employees SET Score = 6.5 WHERE EmpID = 4;
+UPDATE Employees SET Score = 6.0 WHERE EmpID = 5;
+
 
 insert into Departments values
 (101, 'IT'),
@@ -46,3 +56,40 @@ select EmpName from Employees e where exists (select 1 from Departments d where 
 select EmpName,Salary from Employees where Salary>any(select Salary from Employees where DeptID=101);
 
 select EmpName, Salary from Employees where Salary > ALL (select Salary from Employees where DeptID = 101);
+
+SELECT 
+    e.EmpName,
+    d.DeptName,
+    e.Salary
+FROM Employees e
+LEFT JOIN Departments d
+ON e.DeptID = d.DeptID;
+
+GO
+CREATE FUNCTION getNthHighestSalary (@N INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @result INT;
+
+    SELECT @result = Salary
+    FROM (
+        SELECT Salary,
+               DENSE_RANK() OVER (ORDER BY Salary DESC) AS ranked
+        FROM Employees
+    ) AS temp_table
+    WHERE ranked = @N;
+
+    RETURN @result;
+END;
+GO
+
+select COUNT(*) as TotalEmployees,MAX(Salary) AS SecondHighestSalary FROM Employees;
+
+SELECT dbo.getNthHighestSalary(1) AS FirstHighestSalary;
+SELECT dbo.getNthHighestSalary(2) AS SecondHighestSalary;
+SELECT dbo.getNthHighestSalary(3) AS ThirdHighestSalary;
+
+select * from Employees ;
+
+select Score, DENSE_RANK() OVER(ORDER BY score DESC) AS 'rank' from Employees;
