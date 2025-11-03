@@ -1,0 +1,72 @@
+header {
+    position: relative;
+    height: 30vh;             
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header::before {
+    content: "★";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: gold;
+}
+
+header::after {
+    content: "★";
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 2rem;
+    color: gold;
+}
+
+main {
+    padding: 5vw; 
+}
+
+section {
+    background-color: white;
+    margin-bottom: 5vh;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+section::before {
+    content: "Note:";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #ffeb3b;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+    main {
+        padding: 3vw;
+    }
+
+    section {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        height: 40vh; 
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

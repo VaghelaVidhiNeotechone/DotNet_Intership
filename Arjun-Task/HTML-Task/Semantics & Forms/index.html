@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    /* Basic page styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header, nav, main, section, article, aside, footer {
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 95%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <h1>My Semantic HTML Page</h1>
+    <p>Understanding the meaning of HTML5 sectioning elements</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome Section</h2>
+      <p>This is the main section of the webpage, wrapped inside the <code>&lt;main&gt;</code> tag.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Section</h2>
+      <article>
+        <h3>What are Semantic Tags?</h3>
+        <p>
+          Semantic HTML5 tags clearly describe their purpose in both human and machine-readable ways.
+          Examples include:
+        </p>
+        <ul>
+          <li><code>&lt;header&gt;</code> — top section or banner of a page</li>
+          <li><code>&lt;nav&gt;</code> — navigation links</li>
+          <li><code>&lt;main&gt;</code> — main content area</li>
+          <li><code>&lt;section&gt;</code> — thematic grouping of content</li>
+          <li><code>&lt;article&gt;</code> — independent, self-contained content</li>
+          <li><code>&lt;aside&gt;</code> — sidebar or related information</li>
+          <li><code>&lt;footer&gt;</code> — footer section</li>
+        </ul>
+      </article>
+    </section>
+
+    <aside>
+      <h2>Aside (Sidebar)</h2>
+      <p>This area could include links, ads, or related info.</p>
+    </aside>
+
+    <section id="contact">
+      <h2>Contact Us Form</h2>
+
+      <form action="#" method="post">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6">
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a footer</p>
+  </footer>
+</body>
+</html>
