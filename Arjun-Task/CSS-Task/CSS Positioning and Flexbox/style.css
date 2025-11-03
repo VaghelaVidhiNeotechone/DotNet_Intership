@@ -1,0 +1,121 @@
+.navbar {
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;             
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;          
+    top: 0;
+    z-index: 1000;             
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;              
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;          
+    flex-wrap: wrap;              
+    justify-content: center;     
+    gap: 20px;                   
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 250px;
+    padding: 20px;
+    display: flex;             
+    flex-direction: column;       
+    align-items: center;         
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+    color: #555;
+}
+
+.position-container {
+    margin: 50px;
+    background-color: #ddd;
+    padding: 20px;
+    height: 200px;
+    position: relative;     
+}
+
+.position-box {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    top: 20px;
+    left: 20px;
+    z-index: 10; 
+}
+
+.position-fixed {
+    position: fixed;    
+    bottom: 20px;
+    right: 20px;
+    background-color: teal;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        background-color: #444;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

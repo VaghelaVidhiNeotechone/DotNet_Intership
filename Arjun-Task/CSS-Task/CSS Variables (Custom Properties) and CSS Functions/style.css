@@ -1,0 +1,75 @@
+:root {
+    --primary-color: hsl(200, 70%, 50%);
+    --secondary-color: rgb(255, 165, 0);
+    --text-color: #333;
+    --card-padding: 20px;
+    --card-radius: 15px;
+    --card-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    --blur-amount: 4px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+}
+
+.card {
+    background-color: hsl(200, 70%, 90%);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    width: calc(300px + 5vw);
+    margin: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    filter: brightness(1.2) contrast(1.2) blur(var(--blur-amount));
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(50%) brightness(1.1);
+    transition: filter 0.3s ease;
+}
+
+.card img:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: hsl(39, 100%, 50%);
+    transform: scale(1.05);
+}
+
+.card.special {
+    --card-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background-color: hsl(160, 60%, 80%);
+}
