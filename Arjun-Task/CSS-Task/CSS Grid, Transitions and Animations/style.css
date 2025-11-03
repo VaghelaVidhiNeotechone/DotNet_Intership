@@ -1,0 +1,90 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding: 20px;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.left {
+    grid-area: left;
+    background-color: #d4edda;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #cce5ff;
+    padding: 20px;
+    transition: all 0.4s ease; 
+}
+
+.main:hover {
+    background-color: #99ccff;
+    transform: scale(1.05);
+}
+
+.right {
+    grid-area: right;
+    background-color: #fff3cd;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.animate-box {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    margin: 40px auto;
+    border-radius: 10px;
+    animation-name: bounce;  
+    animation-duration: 2s;     
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right"
+            "footer";
+    }
+}
