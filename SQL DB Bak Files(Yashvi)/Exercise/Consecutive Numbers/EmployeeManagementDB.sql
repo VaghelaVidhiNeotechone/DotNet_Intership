@@ -2,9 +2,7 @@ use EmployeeManagementDB;
 
 SELECT EmpID, Score FROM Employees;
 
-SELECT DISTINCT e1.Score AS ConsecutiveNums
-FROM Employees e1
-JOIN Employees e2 
-    ON e1.EmpID = e2.EmpID - 1
-WHERE e1.Score = e2.Score;
-
+SELECT DISTINCT l1.Score AS CONSECUTIVENUMS FROM Employees l1
+JOIN Employees l2 ON l2.EmpID = l1.EmpID+1
+JOIN Employees l3 ON l3.EmpID = l2.EmpID+1 
+WHERE l1.Score =l2.Score AND l2.Score = l3.Score;
