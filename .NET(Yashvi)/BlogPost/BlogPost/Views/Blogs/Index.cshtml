@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EfCoreMigrationsExample.Models.Blog>
+
+@{
+    ViewData["Title"] = "Blog List";
+}
+
+<h1 class="text-center mb-4">All Blogs</h1>
+
+<div class="container">
+    @foreach (var blog in Model)
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title text-primary">@blog.Name</h3>
+
+                @if (blog.Posts != null && blog.Posts.Any())
+                {
+                    <ul class="list-group list-group-flush">
+                        @foreach (var post in blog.Posts)
+                        {
+                            <li class="list-group-item">
+                                <h5>@post.Title</h5>
+                                <p>@post.Content</p>
+                                <small class="text-muted">
+                                    Created: @post.CreatedDate.ToString("yyyy-MM-dd HH:mm")
+                                </small>
+
+                                @if (post.Tags != null && post.Tags.Any())
+                                {
+                                    <p class="mt-2">
+                                        <strong>Tags:</strong>
+                                        @foreach (var tag in post.Tags)
+                                        {
+                                            <span class="badge bg-secondary">@tag.Name</span>
+                                        }
+                                    </p>
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>No posts available for this blog.</p>
+                }
+            </div>
+        </div>
+    }
+</div>

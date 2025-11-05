@@ -23,11 +23,19 @@ insert into Employees values
 (5, 'xyz', NULL, 40000);
 
 UPDATE Employees SET Score = 7.5 WHERE EmpID = 1;
-UPDATE Employees SET Score = 8.0 WHERE EmpID = 2;
+UPDATE Employees SET Score = 7.5 WHERE EmpID = 2;
 UPDATE Employees SET Score = 7.5 WHERE EmpID = 3;
 UPDATE Employees SET Score = 6.5 WHERE EmpID = 4;
 UPDATE Employees SET Score = 6.0 WHERE EmpID = 5;
 
+Select * from Employees;
+
+ALTER TABLE Employees ADD Score1 DECIMAL(5,2);
+UPDATE Employees SET Score1 = Score;
+
+INSERT INTO Employees (EmpID, EmpName, DeptID, Salary, Score, Score1)
+VALUES (8, 'arya', 101, 50000, 7.50, 7.50);
+SELECT * FROM Employees;
 
 insert into Departments values
 (101, 'IT'),
