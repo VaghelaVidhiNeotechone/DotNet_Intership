@@ -11,6 +11,6 @@ insert into Persons values
 
 select * from Persons;
 
-select email AS Email from Persons
-group by email
-having count(*) > 1;
+--select email AS Email from Persons
+--group by email
+--having count(*) > 1;
