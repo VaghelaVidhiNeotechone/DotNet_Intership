@@ -5,7 +5,6 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1️⃣ Configure Services
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 
@@ -14,7 +13,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
-// Swagger Configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -26,10 +24,8 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// 2️⃣ Build the App
 var app = builder.Build();
 
-// 3️⃣ Configure Middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -37,7 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bank Management API V1");
-        c.RoutePrefix = string.Empty; // Opens Swagger at root URL
+        c.RoutePrefix = string.Empty; 
     });
 }
 else
