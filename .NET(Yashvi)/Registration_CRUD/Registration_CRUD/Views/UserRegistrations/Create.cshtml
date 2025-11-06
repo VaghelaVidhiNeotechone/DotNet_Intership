@@ -1,0 +1,64 @@
+﻿@model RegistrationFormMVC.Models.UserRegistration
+
+@{
+    ViewData["Title"] = "Register User";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label><br />
+        <input type="radio" name="Gender" value="Male" /> Male
+        <input type="radio" name="Gender" value="Female" /> Female
+    </div>
+
+    <div class="form-group">
+        <label>Skills</label><br />
+        <input type="checkbox" name="Skills" value="C#" /> C#
+        <input type="checkbox" name="Skills" value="ASP.NET" /> ASP.NET
+        <input type="checkbox" name="Skills" value="SQL" /> SQL
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Country"></label>
+        <select asp-for="Country" class="form-control">
+            <option value="">--Select Country--</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <textarea asp-for="Address" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
