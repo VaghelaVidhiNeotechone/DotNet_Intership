@@ -1,0 +1,104 @@
+﻿@model DBFirstApproach_CRUD.Models.UserRegistration
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<h4>UserRegistration</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group mb-3">
+                <label asp-for="FullName" class="form-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Gender</label><br />
+                <div class="form-check form-check-inline">
+                    <input type="radio" asp-for="Gender" class="form-check-input" value="Male" />
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" asp-for="Gender" class="form-check-input" value="Female" />
+                    <label class="form-check-label">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" asp-for="Gender" class="form-check-input" value="Other" />
+                    <label class="form-check-label">Other</label>
+                </div>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Skills</label><br />
+                @{
+                    var skills = Model.Skills?.Split(',') ?? new string[] { };
+                }
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" name="Skills" value="C#" class="form-check-input"
+                           @(skills.Contains("C#") ? "checked" : "") />
+                    <label class="form-check-label">C#</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" name="Skills" value="ASP.NET" class="form-check-input"
+                           @(skills.Contains("ASP.NET") ? "checked" : "") />
+                    <label class="form-check-label">ASP.NET</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" name="Skills" value="SQL" class="form-check-input"
+                           @(skills.Contains("SQL") ? "checked" : "") />
+                    <label class="form-check-label">SQL</label>
+                </div>
+                <span asp-validation-for="Skills" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Country" class="form-label"></label>
+                <select asp-for="Country" class="form-select">
+                    <option value="">--Select Country--</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Address" class="form-label"></label>
+                <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary ms-2">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
