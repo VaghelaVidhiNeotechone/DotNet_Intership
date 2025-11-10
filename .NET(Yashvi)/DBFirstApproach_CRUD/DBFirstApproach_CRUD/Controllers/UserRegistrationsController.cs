@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DBFirstApproach_CRUD.Models;
+using System.Security.Cryptography;
+using System.Text;
+using Microsoft.AspNetCore.Http;
 
 namespace DBFirstApproach_CRUD.Controllers
 {
@@ -49,14 +52,18 @@ namespace DBFirstApproach_CRUD.Controllers
         }
 
         // POST: UserRegistrations/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FullName,Email,Password,Gender,Skills,Country,Address")] UserRegistration userRegistration)
         {
             if (ModelState.IsValid)
             {
+                // Hash the password into a short numeric value
+                if (!string.IsNullOrEmpty(userRegistration.Password))
+                {
+                    userRegistration.Password = GenerateShortNumericHash(userRegistration.Password);
+                }
+
                 _context.Add(userRegistration);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -81,8 +88,6 @@ namespace DBFirstApproach_CRUD.Controllers
         }
 
         // POST: UserRegistrations/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, IFormCollection form, UserRegistration user)
@@ -100,6 +105,23 @@ namespace DBFirstApproach_CRUD.Controllers
             {
                 try
                 {
+                    // Get existing record
+                    var existingUser = _context.UserRegistrations.AsNoTracking().FirstOrDefault(u => u.Id == id);
+                    if (existingUser == null)
+                    {
+                        return NotFound();
+                    }
+
+                    //  Preserve old password if not changed
+                    if (!string.IsNullOrEmpty(user.Password))
+                    {
+                        user.Password = GenerateShortNumericHash(user.Password);
+                    }
+                    else
+                    {
+                        user.Password = existingUser.Password;
+                    }
+
                     _context.Update(user);
                     _context.SaveChanges();
                 }
@@ -119,7 +141,6 @@ namespace DBFirstApproach_CRUD.Controllers
 
             return View(user);
         }
-
 
         // GET: UserRegistrations/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -157,6 +178,18 @@ namespace DBFirstApproach_CRUD.Controllers
         private bool UserRegistrationExists(int id)
         {
             return _context.UserRegistrations.Any(e => e.Id == id);
+        }
+
+        // Helper: Generate short numeric hash (10 digits)
+        private string GenerateShortNumericHash(string input)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] hashBytes = sha.ComputeHash(Encoding.UTF8.GetBytes(input));
+                long numericHash = BitConverter.ToInt64(hashBytes, 0);
+                numericHash = Math.Abs(numericHash);
+                return (numericHash % 10000000000).ToString("D10"); // Always 10 digits
+            }
         }
     }
 }
