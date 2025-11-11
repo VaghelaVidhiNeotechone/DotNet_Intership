@@ -10,7 +10,7 @@ namespace MyApp
     {
         public class Vehicle
         {
-            // 2️⃣ ENCAPSULATION — Hiding data using private fields
+            //  ENCAPSULATION — Hiding data using private fields
             private string _engineNumber;
 
             public string EngineNumber
