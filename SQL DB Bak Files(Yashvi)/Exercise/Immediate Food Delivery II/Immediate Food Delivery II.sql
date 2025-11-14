@@ -22,3 +22,4 @@ FROM (SELECT *,
       RANK() OVER (PARTITION BY customer_id ORDER BY order_date) AS rank 
       FROM Delivery) AS data
 WHERE rank = 1
+
