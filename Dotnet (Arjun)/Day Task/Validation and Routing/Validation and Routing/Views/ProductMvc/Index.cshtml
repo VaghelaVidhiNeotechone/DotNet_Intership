@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model List<Validation_and_Routing.Models.Product>
+
+<h2>Products List</h2>
+
+<p>
+    <a asp-controller="ProductMvc" asp-action="Create">Add New Product</a>
+</p>
+
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background-color: #f0f0f0;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+            <td>
+                <a asp-controller="ProductMvc" asp-action="Details" asp-route-id="@p.Id">Details</a> |
+                <a asp-controller="ProductMvc" asp-action="Edit" asp-route-id="@p.Id">Edit</a> |
+                <a asp-controller="ProductMvc" asp-action="Delete" asp-route-id="@p.Id"
+                   onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
