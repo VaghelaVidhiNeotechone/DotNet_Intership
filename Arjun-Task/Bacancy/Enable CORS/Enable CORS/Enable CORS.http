@@ -1,0 +1,6 @@
+@Enable_CORS_HostAddress = http://localhost:5265
+
+GET {{Enable_CORS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
