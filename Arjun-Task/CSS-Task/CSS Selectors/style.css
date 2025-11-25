@@ -1,0 +1,66 @@
+
+* {
+  box-sizing: border-box;
+}
+
+h1, a, button {
+  text-align: center;
+}
+
+body {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#main-btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#main-btn:hover {
+  background-color: royalblue;
+}
+#main-btn:active {
+  background-color: navy;
+}
+
+a.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+a.btn-link:hover {
+  background-color: #218838;
+}
+
+a.btn-link:active {
+  background-color: #1e7e34;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}

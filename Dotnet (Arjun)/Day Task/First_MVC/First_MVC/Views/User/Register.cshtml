@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model First_MVC.Models.User
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>User Registration</h2>
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post))
+{
+
+    <div>
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit">Register</button>
+}
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
