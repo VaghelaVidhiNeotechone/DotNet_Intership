@@ -10,7 +10,7 @@ INSERT INTO Users3 (user_id, name) VALUES
 (2, 'bOB'),
 (3, 'cHRistian');
 
-select * from Users3;
+select * from Users3
 
 SELECT user_id, UPPER(LEFT(name, 1)) + LOWER(SUBSTRING(name, 2, LEN(name) - 1)) AS name
 FROM Users3 ORDER BY user_id;
