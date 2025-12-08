@@ -1,0 +1,6 @@
+@RepoDemoApi_HostAddress = http://localhost:5034
+
+GET {{RepoDemoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
