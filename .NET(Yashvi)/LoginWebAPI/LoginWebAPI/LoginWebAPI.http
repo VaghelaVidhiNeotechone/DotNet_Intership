@@ -1,6 +1,0 @@
-@LoginWebAPI_HostAddress = http://localhost:5139
-
-GET {{LoginWebAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
