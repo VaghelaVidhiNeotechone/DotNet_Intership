@@ -13,5 +13,8 @@ INSERT INTO Products2 (product_id, store1, store2, store3) VALUES
 
 select * from Products2;
 
-SELECT product_id, store, price FROM Products2
-UNPIVOT( price FOR store IN (store1, store2, store3)) AS UnpivotedProducts;
+Select product_id,'store1' as store,store1 as price from Products2 where store1 is not null
+union
+Select product_id,'store2' as store,store2 as price from Products2 where store2 is not null
+union
+Select product_id,'store3' as store,store3 as price from Products2 where store3 is not null
