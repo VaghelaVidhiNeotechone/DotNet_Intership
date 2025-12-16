@@ -16,7 +16,6 @@ public class EmployeeController : ControllerBase
         _context = context;
     }
 
-    // 🔓 OPTIONAL: allow viewing employees without login
     [HttpGet]
     [AllowAnonymous]
     public async Task<IActionResult> GetAll()
@@ -25,7 +24,6 @@ public class EmployeeController : ControllerBase
         return Ok(employees);
     }
 
-    // 🔐 CREATE (TOKEN REQUIRED)
     [HttpPost]
     [Authorize]
     public async Task<IActionResult> Create([FromBody] CreateEmployeeDto dto)
@@ -43,7 +41,6 @@ public class EmployeeController : ControllerBase
         return Ok(employee);
     }
 
-    // 🔐 UPDATE (TOKEN REQUIRED)
     [HttpPut("{id}")]
     [Authorize]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateEmployeeDto dto)
@@ -61,7 +58,6 @@ public class EmployeeController : ControllerBase
         return Ok(employee);
     }
 
-    // 🔐 DELETE (TOKEN REQUIRED)
     [HttpDelete("{id}")]
     [Authorize]
     public async Task<IActionResult> Delete(int id)

@@ -86,7 +86,7 @@ builder.Services.AddSwaggerGen(options =>
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer",
         BearerFormat = "JWT",
-        In = ParameterLocation.Header,
+        In = ParameterLocation.Header,  
         Description = "Enter: Bearer {your JWT token}"
     });
 
@@ -108,7 +108,6 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// ================= PIPELINE =================
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
