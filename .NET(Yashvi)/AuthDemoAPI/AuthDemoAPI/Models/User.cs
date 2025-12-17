@@ -46,7 +46,7 @@ namespace AuthDemoAPI.Models
 
         public string ImageUrl { get; set; } = string.Empty;
 
-        // ✅ IMPORTANT: Role column (FIXES YOUR ERROR)
+
         [Required]
         [MaxLength(20)]
         public string Role { get; set; } = "User";
