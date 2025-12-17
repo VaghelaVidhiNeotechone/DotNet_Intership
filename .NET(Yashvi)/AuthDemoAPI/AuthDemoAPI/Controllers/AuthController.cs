@@ -24,14 +24,18 @@ namespace AuthDemoAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            if (await _context.Users.AnyAsync(u => u.Username == dto.Username))
+            var username = dto.Username.Trim().ToLower();
+
+            if (await _context.Users.AnyAsync(u => u.Username.ToLower() == username))
                 return BadRequest("Username already exists");
 
             var user = new User
             {
                 FullName = dto.FullName,
-                Username = dto.Username,
+                Username = username,
                 Email = dto.Email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
                 Age = dto.Age,
@@ -49,7 +53,7 @@ namespace AuthDemoAPI.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return Ok("User registered successfully");
+            return Ok(new { message = "User registered successfully" });
         }
 
         // ---------------- LOGIN ----------------
@@ -59,10 +63,17 @@ namespace AuthDemoAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await _context.Users
-                .FirstOrDefaultAsync(x => x.Username == dto.Username);
+            var username = dto.Username.Trim().ToLower();
 
-            if (user == null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
+            var user = await _context.Users
+                .FirstOrDefaultAsync(x => x.Username.ToLower() == username);
+
+            if (user == null)
+                return Unauthorized("Invalid username or password");
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash);
+
+            if (!isPasswordValid)
                 return Unauthorized("Invalid username or password");
 
             var token = _jwtHelper.GenerateToken(user.Username, user.Role);
@@ -72,6 +83,7 @@ namespace AuthDemoAPI.Controllers
                 token,
                 user = new
                 {
+                    user.Id,
                     user.Username,
                     user.Email,
                     user.Role
