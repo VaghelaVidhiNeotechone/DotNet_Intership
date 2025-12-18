@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RepositoryPatternDemo.Models;
-using RepositoryPatternDemo.Repositories;
-
+using RepositoryPatternDemo.Services;
 
 namespace RepositoryPatternDemo.Controllers
 {
@@ -9,58 +8,49 @@ namespace RepositoryPatternDemo.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductRepository _repository;
-        private RepositoryPatternDemo.Services.IProductService @object;
-
-        public ProductsController(IProductRepository repository)
+        private readonly IProductService _productService;
+         
+        public ProductsController(IProductService productService)
         {
-            _repository = repository;
-        }
-
-        public ProductsController(RepositoryPatternDemo.Services.IProductService @object)
-        {
-            this.@object = @object;
+            _productService = productService
+                ?? throw new ArgumentNullException(nameof(productService));
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_repository.GetAll());
+            var products = _productService.GetAll();
+            return Ok(products);
         }
-
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var product = _repository.GetById(id);
-            if (product == null) return NotFound();
+            var product = _productService.GetById(id);
+            if (product == null)
+                return NotFound();
+
             return Ok(product);
         }
-
 
         [HttpPost]
         public IActionResult Create(Product product)
         {
-            _repository.Add(product);
-            _repository.Save();
+            _productService.Add(product);
             return Ok(product);
         }
-
 
         [HttpPut]
         public IActionResult Update(Product product)
         {
-            _repository.Update(product);
-            _repository.Save();
+            _productService.Update(product);
             return Ok(product);
         }
-
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _repository.Delete(id);
-            _repository.Save();
+            _productService.Delete(id);
             return Ok();
         }
     }
