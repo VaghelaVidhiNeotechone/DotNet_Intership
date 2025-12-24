@@ -1,0 +1,6 @@
+@Advanced_Repository_Techniques_HostAddress = http://localhost:5049
+
+GET {{Advanced_Repository_Techniques_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
