@@ -1,0 +1,23 @@
+﻿@using _3TierArchitecture.Model.Models
+@model Product
+
+<h2>Edit Product</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Name"></label><br />
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="Price"></label><br />
+        <input asp-for="Price " />
+    </div>
+
+    <br />
+    <button type="submit">Update</button>
+</form>
+
+<a asp-action="Index">Back to List</a>
