@@ -1,0 +1,17 @@
+﻿@using _3TierArchitecture.Model.Models
+@model Product
+
+<h2>Delete Product</h2>
+
+<h4>Are you sure you want to delete this?</h4>
+
+<p>
+    <strong>@Model.Name</strong> - @Model.Price
+</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Delete</button>
+</form>
+
+<a asp-action="Index">Cancel</a>
