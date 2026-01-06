@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Company_module.Domain.Configuration
+namespace Company_module.Domain.Data.Configuration
 {
     public class CompanyDetailContextConfiguration
     : IEntityTypeConfiguration<CompanyDetailEntity>

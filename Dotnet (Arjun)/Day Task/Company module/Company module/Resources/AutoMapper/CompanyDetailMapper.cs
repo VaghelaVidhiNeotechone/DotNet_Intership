@@ -10,8 +10,13 @@ namespace Company_module.Resources.AutoMapper
     {
         public CompanyDetailMapper()
         {
-            CreateMap<CompanyDetailRequest, CompanyDetailEntity>();
-            CreateMap<CompanyDetailEntity, CompanyDetailResponse>();
+            CreateMap<CompanyDetailRequest, CompanyDetailEntity>()
+                .ForMember(dest => dest.countryid, opt => opt.Ignore())
+                .ForMember(dest => dest.currencyid, opt => opt.Ignore());
+
+
+            //CreateMap<CompanyDetailRequest, CompanyDetailEntity>();
+            //CreateMap<CompanyDetailEntity, CompanyDetailResponse>();
         }
     }
 

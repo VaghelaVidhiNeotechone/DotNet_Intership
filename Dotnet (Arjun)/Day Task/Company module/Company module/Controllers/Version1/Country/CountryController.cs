@@ -33,15 +33,29 @@ namespace Company_module.Controllers.Version1.Country
         [HttpPost]
         public async Task<IActionResult> Create(CountryRequest request)
         {
-            await _services.CreateAsync(request);
-            return Ok("Country Created Successfully");
+            try
+            {
+                await _services.CreateAsync(request);
+                return Ok("Country created successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, CountryRequest request)
         {
-            await _services.UpdateAsync(id, request);
-            return Ok("Country Updated Successfully");
+            try
+            {
+                await _services.UpdateAsync(id, request);
+                return Ok("Country updated successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]

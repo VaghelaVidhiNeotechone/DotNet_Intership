@@ -3,7 +3,7 @@ using Company_module.Interface.Repository;
 using Company_module.Models.DTO;
 using Microsoft.EntityFrameworkCore;
 
-namespace Company_module.Domain
+namespace Company_module.Domain.Repository
 {
     public class CompanyDetailRepository : ICompanyDetailRepository
     {
@@ -14,10 +14,21 @@ namespace Company_module.Domain
             _context = context;
         }
 
+        public async Task<bool> CountryExistsAsync(Guid countryId)
+        {
+            return await _context.Countries
+                .AnyAsync(c => c.CountryId == countryId);
+        }
+
+        public async Task<bool> CurrencyExistsAsync(Guid currencyId)
+        {
+            return await _context.Currencies
+                .AnyAsync(c => c.CurrencyId == currencyId);
+        }
+
         public async Task AddAsync(CompanyDetailEntity entity)
         {
             await _context.CompanyDetails.AddAsync(entity);
-            await _context.SaveChangesAsync();
         }
 
         public async Task<List<CompanyDetailEntity>> GetAllAsync()
@@ -27,33 +38,22 @@ namespace Company_module.Domain
                 .ToListAsync();
         }
 
-        public async Task<CompanyDetailEntity> GetByIdAsync(Guid companyId)
+        public async Task<CompanyDetailEntity?> GetByIdAsync(Guid companyId)
         {
             return await _context.CompanyDetails
                 .FirstOrDefaultAsync(x => x.companyid == companyId && !x.IsDeleted);
         }
 
-        public async Task UpdateAsync(CompanyDetailEntity entity)
+        public void Update(CompanyDetailEntity entity)
         {
             _context.CompanyDetails.Update(entity);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid companyId)
+        public void Delete(CompanyDetailEntity entity)
         {
-            var data = await GetByIdAsync(companyId);
-            if (data != null)
-            {
-                data.IsDeleted = true;
-                _context.CompanyDetails.Update(data);
-                await _context.SaveChangesAsync();
-            }
+            entity.IsDeleted = true;
+            _context.CompanyDetails.Update(entity);
         }
-
-
-
     }
-
-
 
 }

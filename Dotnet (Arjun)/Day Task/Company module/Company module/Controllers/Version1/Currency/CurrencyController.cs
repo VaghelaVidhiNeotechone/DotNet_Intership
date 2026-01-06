@@ -33,15 +33,29 @@ namespace Company_module.Controllers.Version1.Currency
         [HttpPost]
         public async Task<IActionResult> Create(CurrencyRequest request)
         {
-            await _services.CreateAsync(request);
-            return Ok("Currency Created Successfully");
+            try
+            {
+                await _services.CreateAsync(request);
+                return Ok("Currency created successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, CurrencyRequest request)
         {
-            await _services.UpdateAsync(id, request);
-            return Ok("Currency Updated Successfully");
+            try
+            {
+                await _services.UpdateAsync(id, request);
+                return Ok("Currency updated successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message); 
+            }
         }
 
         [HttpDelete("{id}")]

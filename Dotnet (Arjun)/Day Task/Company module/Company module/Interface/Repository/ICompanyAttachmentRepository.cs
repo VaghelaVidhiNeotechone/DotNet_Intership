@@ -9,5 +9,8 @@ namespace Company_module.Interface.Repository
         Task<IEnumerable<CompanyAttachment>> GetAllByCompanyIdAsync(Guid companyId);
         Task UpdateAsync(CompanyAttachment attachment);
         Task DeleteAsync(Guid attachmentId);
+
+
+        Task<bool> CompanyExistsAsync(Guid companyId);
     }
 }

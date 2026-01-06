@@ -19,8 +19,15 @@ namespace Company_module.Controllers.Version1.CompanyDetail
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] CompanyAttachmentRequest request)
         {
-            await _attachmentServices.AddCompanyAttachment(request);
-            return Ok("Attachment Added Successfully");
+            try
+            {
+                await _attachmentServices.AddCompanyAttachment(request);
+                return Ok("Attachment Added Successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id}")]

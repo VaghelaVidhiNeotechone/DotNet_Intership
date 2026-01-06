@@ -3,7 +3,7 @@ using Company_module.Interface.Repository;
 using Company_module.Models.DTO;
 using Microsoft.EntityFrameworkCore;
 
-namespace Company_module.Domain
+namespace Company_module.Domain.Repository
 {
     public class CompanyAttachmentRepository : ICompanyAttachmentRepository
     {
@@ -13,6 +13,14 @@ namespace Company_module.Domain
         {
             _context = context;
         }
+
+
+        public async Task<bool> CompanyExistsAsync(Guid companyId)
+        {
+            return await _context.CompanyDetails
+                .AnyAsync(c => c.companyid == companyId);
+        }
+
 
         public async Task AddAsync(CompanyAttachment attachment)
         {

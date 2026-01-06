@@ -18,6 +18,13 @@ namespace Company_module.Services.CompanyDetail
         public async Task AddCompanyAttachment(
             CompanyAttachmentRequest request)
         {
+            var companyExists = await _repo.CompanyExistsAsync(request.companyid);
+
+            if (!companyExists)
+            {
+                throw new Exception("Invalid CompanyId. Company does not exist.");
+            }
+
             var attachment = new CompanyAttachment
             {
                 attachmentid = Guid.NewGuid(),
