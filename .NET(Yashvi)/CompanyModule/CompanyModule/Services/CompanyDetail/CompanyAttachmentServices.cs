@@ -79,7 +79,12 @@ namespace CompanyModule.Services.CompanyDetail
 
         public async Task DeleteAttachment(Guid attachmentId)
         {
-            await _repo.DeleteAsync(attachmentId);
+            var attachment = await _repo.GetByIdAsync(attachmentId);
+            if (attachment == null)
+                throw new Exception("Attachment not found");
+
+            attachment.IsDeleted = true;
+            await _repo.UpdateAsync(attachment);
         }
     }
 }

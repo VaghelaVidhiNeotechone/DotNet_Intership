@@ -100,7 +100,15 @@ namespace CompanyModule.Services.CompanyDetail
 
         public async Task DeleteAsync(Guid companyId)
         {
-            await _repo.DeleteAsync(companyId);
+            var company = await _repo.GetByIdAsync(companyId);
+            if (company == null)
+                throw new Exception("Company not found");
+
+            company.IsDeleted = true;
+            company.status = Status.Inactive;
+
+            await _repo.UpdateAsync(company);
         }
+
     }
 }

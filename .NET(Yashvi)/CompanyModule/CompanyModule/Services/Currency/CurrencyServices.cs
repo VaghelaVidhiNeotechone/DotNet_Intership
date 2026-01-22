@@ -68,7 +68,11 @@ namespace CompanyModule.Services.Currency
             if (currency == null)
                 throw new Exception("Currency not found");
 
-            await _repo.DeleteAsync(currency);
+            currency.IsDeleted = true;          // ✅ SOFT DELETE
+            currency.Status = Status.Inactive;  // optional but recommended
+
+            await _repo.UpdateAsync(currency);
         }
+
     }
 }

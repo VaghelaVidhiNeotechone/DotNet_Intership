@@ -14,40 +14,55 @@ namespace CompanyModule.Domain
             _context = context;
         }
 
+        // ✅ CREATE
         public async Task AddAsync(CompanyAttachment attachment)
         {
             await _context.CompanyAttachments.AddAsync(attachment);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<CompanyAttachment> GetByIdAsync(Guid attachmentId)
+        // ✅ GET BY ID (HIDE DELETED)
+        public async Task<CompanyAttachment?> GetByIdAsync(Guid attachmentId)
         {
             return await _context.CompanyAttachments
-                .FirstOrDefaultAsync(a => a.attachmentid == attachmentId && !a.IsDeleted);
+                .AsNoTracking()
+                .FirstOrDefaultAsync(a =>
+                    a.attachmentid == attachmentId &&
+                    !a.IsDeleted);
         }
 
+        // ✅ GET ALL BY COMPANY (HIDE DELETED)
         public async Task<IEnumerable<CompanyAttachment>> GetAllByCompanyIdAsync(Guid companyId)
         {
             return await _context.CompanyAttachments
-                .Where(a => a.companyid == companyId && !a.IsDeleted)
+                .AsNoTracking()
+                .Where(a =>
+                    a.companyid == companyId &&
+                    !a.IsDeleted)
+                .OrderByDescending(a => a.CreatedDate)
                 .ToListAsync();
         }
 
+        // ✅ UPDATE
         public async Task UpdateAsync(CompanyAttachment attachment)
         {
             _context.CompanyAttachments.Update(attachment);
             await _context.SaveChangesAsync();
         }
 
+        // ✅ SOFT DELETE (DO NOT REMOVE FROM DB)
         public async Task DeleteAsync(Guid attachmentId)
         {
-            var entity = await GetByIdAsync(attachmentId);
-            if (entity != null)
-            {
-                entity.IsDeleted = true;
-                await _context.SaveChangesAsync();
-            }
+            var entity = await _context.CompanyAttachments
+                .FirstOrDefaultAsync(a =>
+                    a.attachmentid == attachmentId &&
+                    !a.IsDeleted);
+
+            if (entity == null)
+                return;
+
+            entity.IsDeleted = true;
+            await _context.SaveChangesAsync();
         }
     }
-
 }

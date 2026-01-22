@@ -27,10 +27,10 @@ namespace CompanyModule.Domain
                 .ToListAsync();
         }
 
-        public async Task<CompanyDetailEntity> GetByIdAsync(Guid companyId)
+        public async Task<CompanyDetailEntity?> GetByIdAsync(Guid id)
         {
             return await _context.CompanyDetails
-                .FirstOrDefaultAsync(x => x.companyid == companyId && !x.IsDeleted);
+                .FirstOrDefaultAsync(x => x.companyid == id && !x.IsDeleted);
         }
 
         public async Task UpdateAsync(CompanyDetailEntity entity)

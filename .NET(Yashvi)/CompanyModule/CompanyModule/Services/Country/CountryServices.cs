@@ -54,9 +54,13 @@ namespace CompanyModule.Services.Country
         public async Task DeleteAsync(Guid id)
         {
             var country = await _repo.GetByIdAsync(id);
-            if (country == null) throw new Exception("Country not found");
+            if (country == null)
+                throw new Exception("Country not found");
 
-            await _repo.DeleteAsync(country);
+            country.IsDeleted = true;
+            country.Status = Status.Inactive;
+
+            await _repo.UpdateAsync(country);
         }
     }
 }
